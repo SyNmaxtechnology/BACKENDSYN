@@ -1034,7 +1034,7 @@ Factura.paginarFacturasNoEnviadas = (cantidadRegistros, desde) => { //comentario
                 AND e.estado_emisor='1' 
                 AND f.proforma IS NULL 
                 AND e.client_id = 'api-prod' 
-                and f.idemisor='213'
+                
                 AND f.tipo_factura='01'             
                 ORDER BY f.tipo_factura,f.id DESC  LIMIT ${desde},${cantidadRegistros}`, [], (err, rows, fields) => { //comentario envie primero las faccturas Y SOLO CODIGO ESTADO NULL **${response[0].prioridadEmisores > 0 ? ' AND e.prioridad = 1' : ''}
                     if (err) {
@@ -1051,8 +1051,8 @@ Factura.paginarFacturasNoEnviadas = (cantidadRegistros, desde) => { //comentario
                 AND f.proforma IS NULL 
                 AND e.client_id = 'api-prod'
                 AND f.tipo_factura = '04'   
-                and f.idemisor='213'
-                AND f.fecha_factura > '2025-03-01 00:00:00'
+               
+                AND f.fecha_factura > '2025-08-01 00:00:00'
                 ORDER BY e.prioridad DESC,f.id  LIMIT ${desde},${cantidadRegistros}`, [], (err, rows, fields) => { //comentario envie primero las faccturas Y SOLO CODIGO ESTADO NULL **${response[0].prioridadEmisores > 0 ? ' AND e.prioridad = 1' : ''}
                     if (err) {
                         return reject(err);
@@ -2038,3 +2038,4 @@ module.exports = Factura;
                         *Nuevo Reporte** Reporte de razones no compra / agrupado por razon digitada/ % de participacion de la razon vrs el total
 
                 */
+
