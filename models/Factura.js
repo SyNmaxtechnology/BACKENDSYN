@@ -1026,7 +1026,7 @@ Factura.paginarFacturasNoEnviadas = (cantidadRegistros, desde) => { //comentario
         try {
 
             const response =  await Emisor.obtenerIdEmisorPorPrioridadActivada();
-            if(response[0].prioridadEmisores > 1) {
+            if(response[0].prioridadEmisores >= 1) {
                 pool.query(`SELECT f.id,f.tipo_factura,f.proforma, e.id as idemisor 
                 FROM Factura f, Emisor e 
                 WHERE f.status_factura IS NULL
@@ -2038,3 +2038,4 @@ module.exports = Factura;
                         *Nuevo Reporte** Reporte de razones no compra / agrupado por razon digitada/ % de participacion de la razon vrs el total
 
                 */
+
