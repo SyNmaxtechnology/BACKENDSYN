@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><FacturaElectronica xmlns="https://cdn.comprobanteselectronicos.go.cr/xml-schemas/v4.3/facturaElectronica" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <Clave>50617052400310188060700100001010000001668100010590</Clave>
+   <CodigoActividad>505002</CodigoActividad>
+   <NumeroConsecutivo>00100001010000001668</NumeroConsecutivo>
+   <FechaEmision>2024-05-17T13:28:41-06:00</FechaEmision>
+   <Emisor>
+      <Nombre>MULTISERVICIOS SAN CRISTOBAL</Nombre>
+      <Identificacion>
+         <Tipo>02</Tipo>
+         <Numero>3101880607</Numero>
+      </Identificacion>
+      <NombreComercial/>
+      <Ubicacion>
+         <Provincia>3</Provincia>
+         <Canton>06</Canton>
+         <Distrito>02</Distrito>
+         <Barrio>06</Barrio>
+         <OtrasSenas>No aporta</OtrasSenas>
+      </Ubicacion>
+      <Telefono>
+         <CodigoPais>506</CodigoPais>
+         <NumTelefono>25347117</NumTelefono>
+      </Telefono>
+      <Fax>
+         <CodigoPais>506</CodigoPais>
+         <NumTelefono>25347117</NumTelefono>
+      </Fax>
+      <CorreoElectronico>sancristobal107@gmail.com</CorreoElectronico>
+   </Emisor>
+   <Receptor>
+      <Nombre>INVERSIONES NUNEZ Y CAMACHO   SOCIEDAD ANONIMA  </Nombre>
+      <Identificacion>
+         <Tipo>02</Tipo>
+         <Numero>3101863375</Numero>
+      </Identificacion>
+      <NombreComercial/>
+      <Ubicacion>
+         <Provincia>3</Provincia>
+         <Canton>06</Canton>
+         <Distrito>02</Distrito>
+         <Barrio>06</Barrio>
+         <OtrasSenas/>
+      </Ubicacion>
+      <Telefono>
+         <CodigoPais>506</CodigoPais>
+         <NumTelefono>25347575</NumTelefono>
+      </Telefono>
+      <Fax>
+         <CodigoPais>506</CodigoPais>
+         <NumTelefono>87654321</NumTelefono>
+      </Fax>
+      <CorreoElectronico>pollotecompras@hotmail.com</CorreoElectronico>
+   </Receptor>
+   <CondicionVenta>01</CondicionVenta>
+   <PlazoCredito/>
+   <MedioPago>01</MedioPago>
+   <DetalleServicio>
+      <LineaDetalle>
+         <NumeroLinea>1</NumeroLinea>
+         <Codigo>3611400020100</Codigo>
+         <CodigoComercial>
+            <Tipo>04</Tipo>
+            <Codigo>AC00874</Codigo>
+         </CodigoComercial>
+         <Cantidad>1.000</Cantidad>
+         <UnidadMedida>Unid</UnidadMedida>
+         <UnidadMedidaComercial/>
+         <Detalle>NEUMATICO MOTO KORYO 2.50/2.75-18 TR4 </Detalle>
+         <PrecioUnitario>3000.00000</PrecioUnitario>
+         <MontoTotal>3000.00000</MontoTotal>
+         <SubTotal>3000.00000</SubTotal>
+         <MontoTotalLinea>3000.00000</MontoTotalLinea>
+      </LineaDetalle>
+      <LineaDetalle>
+         <NumeroLinea>2</NumeroLinea>
+         <Codigo>8714100009900</Codigo>
+         <CodigoComercial>
+            <Tipo>04</Tipo>
+            <Codigo>AC00167</Codigo>
+         </CodigoComercial>
+         <Cantidad>1.000</Cantidad>
+         <UnidadMedida>Unid</UnidadMedida>
+         <UnidadMedidaComercial/>
+         <Detalle>REPARACION DE LLANTA</Detalle>
+         <PrecioUnitario>2500.00000</PrecioUnitario>
+         <MontoTotal>2500.00000</MontoTotal>
+         <SubTotal>2500.00000</SubTotal>
+         <Impuesto>
+            <Codigo>01</Codigo>
+            <CodigoTarifa>08</CodigoTarifa>
+            <Tarifa>13.00</Tarifa>
+            <Monto>325.00000</Monto>
+         </Impuesto>
+         <MontoTotalLinea>2825.00000</MontoTotalLinea>
+      </LineaDetalle>
+   </DetalleServicio>
+   <ResumenFactura>
+      <CodigoTipoMoneda>
+         <CodigoMoneda>CRC</CodigoMoneda>
+         <TipoCambio>1</TipoCambio>
+      </CodigoTipoMoneda>
+      <TotalServGravados>0.00000</TotalServGravados>
+      <TotalServExentos>0.00000</TotalServExentos>
+      <TotalServExonerado>0.00000</TotalServExonerado>
+      <TotalMercanciasGravadas>2500.00000</TotalMercanciasGravadas>
+      <TotalMercanciasExentas>3000.00000</TotalMercanciasExentas>
+      <TotalMercExonerada>0.00000</TotalMercExonerada>
+      <TotalGravado>2500.00000</TotalGravado>
+      <TotalExento>3000.00000</TotalExento>
+      <TotalExonerado>0.00000</TotalExonerado>
+      <TotalVenta>5500.00000</TotalVenta>
+      <TotalDescuentos>0.00000</TotalDescuentos>
+      <TotalVentaNeta>5500.00000</TotalVentaNeta>
+      <TotalImpuesto>325.00000</TotalImpuesto>
+      <TotalIVADevuelto>0.00000</TotalIVADevuelto>
+      <TotalComprobante>5825.00000</TotalComprobante>
+   </ResumenFactura>
+   <Otros>
+      <OtroContenido>
+         <ContactoDesarrollador xmlns="http://gandgcr.com">
+            <NombreContacto>GandG PS S.A.</NombreContacto>
+            <CorreoElectronico>gbarquero@gandgcr.com</CorreoElectronico>
+            <Telefono>83496000</Telefono>
+         </ContactoDesarrollador>
+      </OtroContenido>
+   </Otros>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="xmldsig-ac9c9652-c14f-4e35-9fb1-94f60c9b4fea">
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+<ds:Reference Id="xmldsig-ac9c9652-c14f-4e35-9fb1-94f60c9b4fea-ref0" URI="">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<ds:DigestValue>heGWPu0gqkHYyZq+p75K6x7PXndk1vUTzgNddrAEeMI=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xmldsig-ac9c9652-c14f-4e35-9fb1-94f60c9b4fea-signedprops">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<ds:DigestValue>R+xl4BFo6EyXKvFuUCPUzx5vRsqaH21s/nx0BJaUxXA=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="xmldsig-ac9c9652-c14f-4e35-9fb1-94f60c9b4fea-sigvalue">
+Q/a6sjyYaBkZt8MvhsFdcFzFXLU2GgpW2Cz0yBhcFYR3qUmeB9lxDHIlzAJfcuxtoCTEP7BTLV2C&#13;
+ylmkIvgCkQZQMBdXS1reCoa4yDuGlcNkKdrc5QyprLahTiHaSaVSqgGUnJRgSMn5m2gq4W5RvYnt&#13;
+ca+TEYprdUcFx4vsqlJaM0pkECL5ocSJaXoDTlKDhe2PQ+N6j0w+yAwD+gdpGVVfeE4zybcb5t8S&#13;
+8EejgkuuRh7uKWvpRTwgo6rBktfc1gqei7ZvJZFh0hSpLfAaCqCGwm3s+wfywrbXbRugp16CDAyS&#13;
+e9/EzM7HTTEi10aQ5k0XOwpIGiNe2weenJH0jw==
+</ds:SignatureValue>
+<ds:KeyInfo>
+<ds:X509Data>
+<ds:X509Certificate>
+MIIFJjCCAw6gAwIBAgIGAYlKkQidMA0GCSqGSIb3DQEBCwUAMFoxCzAJBgNVBAYTAkNSMR8wHQYD&#13;
+VQQKDBZNSU5JU1RFUklPIERFIEhBQ0lFTkRBMQwwCgYDVQQLDANER1QxHDAaBgNVBAMME0NBIFBF&#13;
+UlNPTkEgSlVSSURJQ0EwHhcNMjMwNzEyMTQ0NjA2WhcNMjcwNzExMTQ0NjA2WjCBgDEZMBcGA1UE&#13;
+BRMQQ1BKLTMtMTAxLTg4MDYwNzELMAkGA1UEBhMCQ1IxGTAXBgNVBAoMEFBFUlNPTkEgSlVSSURJ&#13;
+Q0ExDDAKBgNVBAsMA0NQSjEtMCsGA1UEAwwkTVVMVElTRVJWSUNJT1MgSURHICBTT0NJRURBRCBB&#13;
+Tk9OSU1BMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAl4V+0kAdU3kThOXG+74WJter&#13;
+8Ly9oYbj8+PVTz3Ie7yZ0eusJR3KfKSFwXV78T8CAEUCC09TtL9ot90jydbeHkyIXrkZc2PFJMWd&#13;
+DXKtlIIT96CLejeBgczkY8b+MuiA/YjBsTthCiuBx4+HXf+3uym4XfMBre5rdLStmxsumFfbL2Zl&#13;
+aiD5VqxZsOKTRMbh8oiF4RshGTY2UvIOt8mNyTt7x2R5mqq1gNAI5qXFc8agIFGI0BYHJwJlG9ds&#13;
+7L2/9tH+/xx7j3PZH6y8b6Ql1i1OgWcU07awPlka2WJ545wRvTIb11C6t8khbuvgZ1zu/SBWLxrr&#13;
+vOE5i8P9MokStQIDAQABo4HKMIHHMB8GA1UdIwQYMBaAFDttV/XWfOmeEAIgQeO9GszPs06VMB0G&#13;
+A1UdDgQWBBS1j/NESiDfxAdRdV/Vr+Dxki3XCjALBgNVHQ8EBAMCBsAwEwYDVR0lBAwwCgYIKwYB&#13;
+BQUHAwQwYwYIKwYBBQUHAQEEVzBVMFMGCCsGAQUFBzAChkdodHRwczovL3BraS5jb21wcm9iYW50&#13;
+ZXNlbGVjdHJvbmljb3MuZ28uY3IvcHJvZC9pbnRlcm1lZGlhdGUtcGotcGVtLmNydDANBgkqhkiG&#13;
+9w0BAQsFAAOCAgEAcQVde2zhXI/YxzRoV1gOP9w6DzIdHrXTNARm5azB85DILl9vGOB8jK6OnJgO&#13;
+8oN7fF2X+nkTlDn24Z8W5iqZ2udbqncbNMwKRuze8tKhujmqp1nIyHhvtihLFmGRMbxWrw3+tbo+&#13;
+oRYKBHNDgF8AZtTpfxHN41iwsjABOw01LWkNjnGRSz81WFR0PFZT78foLU7yEXKxsCfqLe/v/5r5&#13;
+X85myaejdevqirLR0ThA+yuO/rY0C7VHO38HVYZPi8yIvqSrcXxmMVfoeXqoHjLGD7QoCSJwkdKh&#13;
+Yt5dRoPrvRG187IwI8ujY7Gf/anCLa2Vvg8h2Ee4NmXleu55i2a7BsTrqCbfdzwwD4yvpAPeHd+Q&#13;
+0BPYDQcFfgk/O+Wgw4IRZXYuwJnK/W1kqWgWq0JehW4O+28By5p2TWu6RaJ1jDjru1mQAl1IL99h&#13;
+yGTUP7rq6nN2mYPD5rIku6NjZCAnKDH6pPxaiV8fitFP/MUz2e3LD7Boeda/RibSt4C2lH92LGjf&#13;
+2pD479bekPcEGtijbU6JDjx+KXMl9zhdgSE8kBNdAaoW9wtR8mEwzXLJjcDSBQIOI0fEIqN70Ekg&#13;
+q0zXlvCfMRGRuwGfauim7HavOuBdyADOw9VNyWSSSBpMP4UA7YqQfaF5H//bbvyHzRUQV6uLQgVM&#13;
+hQ6FgApmAIdmtfw=
+</ds:X509Certificate>
+<ds:X509SubjectName>CN=MULTISERVICIOS IDG  SOCIEDAD ANONIMA,OU=CPJ,O=PERSONA JURIDICA,C=CR,2.5.4.5=#131043504a2d332d3130312d383830363037</ds:X509SubjectName>
+<ds:X509IssuerSerial>
+<ds:X509IssuerName>CN=CA PERSONA JURIDICA,OU=DGT,O=MINISTERIO DE HACIENDA,C=CR</ds:X509IssuerName>
+<ds:X509SerialNumber>1689173166237</ds:X509SerialNumber>
+</ds:X509IssuerSerial>
+</ds:X509Data>
+</ds:KeyInfo>
+<ds:Object><xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" xmlns:xades141="http://uri.etsi.org/01903/v1.4.1#" Target="#xmldsig-ac9c9652-c14f-4e35-9fb1-94f60c9b4fea"><xades:SignedProperties Id="xmldsig-ac9c9652-c14f-4e35-9fb1-94f60c9b4fea-signedprops"><xades:SignedSignatureProperties><xades:SigningTime>2024-05-17T13:32:03.572-06:00</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>GkPEU9AGfhS7iRdgf8AsZ4a/qQnKjwP4OXmQH3oq5yM=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=CA PERSONA JURIDICA,OU=DGT,O=MINISTERIO DE HACIENDA,C=CR</ds:X509IssuerName><ds:X509SerialNumber>1689173166237</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate><xades:SignaturePolicyIdentifier><xades:SignaturePolicyId><xades:SigPolicyId><xades:Identifier>https://tribunet.hacienda.go.cr/docs/esquemas/2016/v4.1/Resolucion_Comprobantes_Electronicos_DGT-R-48-2016.pdf</xades:Identifier><xades:Description>Policy description</xades:Description></xades:SigPolicyId><xades:SigPolicyHash><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>MaW9PDxJruPHhjBVAMWyrF9zP+kMnNqkoQOUXxDDGAk=</ds:DigestValue></xades:SigPolicyHash></xades:SignaturePolicyId></xades:SignaturePolicyIdentifier></xades:SignedSignatureProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object>
+</ds:Signature></FacturaElectronica>

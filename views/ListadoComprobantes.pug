@@ -1,0 +1,82 @@
+extends layout
+
+block contenido
+    .container
+        h2 Reporte de Facturas - Total de Documentos: #{numeroRegistros}
+        h6 Filtros #{filtros}, #{tipoFiltro} 
+    .form-row
+        table.table.table-responsive
+            thead
+                tr
+                    th Número Interno
+                    th Consecutivo
+                    th Clave
+                    th Tipo Documento
+                    th Medio Pago
+                    th Condicion Venta
+                    th Tipo Documento
+                    th Moneda Documento
+                    th Tipo Cambio
+                    th Fecha 
+                    th Hora 
+                    th Identificacion Cliente
+                    th Cliente                
+                    th Razón Social
+                    th Estado Documento
+                    th Subtotal
+                    th Impuestos
+                    th Descuentos
+                    th Servicios Gravados
+                    th Servicios Exentos
+                    th Servicios Exonerados
+                    th Mercancías Gravadas
+                    th Mercancías Exentas
+                    th Mercancías Exoneradas
+                    th Total Gravado
+                    th Total Exento
+                    th Total Exonerado
+                    th Venta 
+                    th Venta Neta
+                    th Total Factura
+                    th IVA Devuelto
+                    th Otros Cargos
+                tbody
+                    tr
+                        if(facturas.length > 0)
+                            each factura in facturas
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+                                td
+
+
+            
+        

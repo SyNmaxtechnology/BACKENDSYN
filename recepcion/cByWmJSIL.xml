@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+                <FacturaElectronica xmlns="https://cdn.comprobanteselectronicos.go.cr/xml-schemas/v4.3/facturaElectronica" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Clave>50631032000011482087500100001010000000524165831742</Clave>
+                <CodigoActividad>722003</CodigoActividad>
+                <NumeroConsecutivo>00100001010000000524</NumeroConsecutivo>
+                <FechaEmision>2020-03-31T11:52:09.500-06:00</FechaEmision>
+                <Emisor>
+                    <Nombre>Natanael Venegas</Nombre>
+                    <Identificacion>
+                        <Tipo>01</Tipo>
+                        <Numero>114820875</Numero>
+                    </Identificacion><NombreComercial/><Ubicacion>
+                        <Provincia>1</Provincia>
+                        <Canton>15</Canton>
+                        <Distrito>52</Distrito>
+                        <Barrio>05</Barrio>
+                        <OtrasSenas>Deportivas UCR </OtrasSenas>
+                    </Ubicacion><Telefono>
+                        <CodigoPais>506</CodigoPais>
+                        <NumTelefono>89600099</NumTelefono>
+                    </Telefono><CorreoElectronico>navemen23@hotmai.com</CorreoElectronico></Emisor><Receptor><Nombre>Daniel Gonzales </Nombre><Identificacion>
+                        <Tipo>01</Tipo>
+                        <Numero>115200399</Numero>
+                    </Identificacion><Ubicacion>
+                        <Provincia>1</Provincia>
+                        <Canton>06</Canton>
+                        <Distrito>05</Distrito>
+                        <Barrio>04</Barrio>
+                        <OtrasSenas>Coronado</OtrasSenas>
+                    </Ubicacion><Telefono>
+                                    <CodigoPais>506</CodigoPais>
+                                    <NumTelefono>83400987</NumTelefono>
+                                </Telefono><CorreoElectronico>info@imagineing.com</CorreoElectronico></Receptor><CondicionVenta>01</CondicionVenta><MedioPago>01</MedioPago><DetalleServicio><LineaDetalle>
+                        <NumeroLinea>1</NumeroLinea>
+                        <Codigo>prod-0001</Codigo><CodigoComercial>
+                            <Tipo>01</Tipo>
+                            <Codigo>prod-0001</Codigo>
+                        </CodigoComercial><Cantidad>1</Cantidad>
+                    <UnidadMedida>N</UnidadMedida><UnidadMedidaComercial>prueba</UnidadMedidaComercial><Detalle>Producto 1</Detalle>
+                        <PrecioUnitario>1200.00000</PrecioUnitario>
+                        <MontoTotal>1200.00000</MontoTotal><SubTotal>1200.00000</SubTotal><Impuesto>
+                            <Codigo>01</Codigo>
+                            <CodigoTarifa>05</CodigoTarifa>
+                        <Tarifa>4.00</Tarifa><Monto>48.00000</Monto></Impuesto><MontoTotalLinea>1248.00000</MontoTotalLinea></LineaDetalle><LineaDetalle>
+                        <NumeroLinea>2</NumeroLinea>
+                        <Codigo>prod-0001</Codigo><CodigoComercial>
+                            <Tipo>01</Tipo>
+                            <Codigo>prod-0001</Codigo>
+                        </CodigoComercial><Cantidad>1</Cantidad>
+                    <UnidadMedida>N</UnidadMedida><UnidadMedidaComercial>prueba</UnidadMedidaComercial><Detalle>Producto 1</Detalle>
+                        <PrecioUnitario>1200.00000</PrecioUnitario>
+                        <MontoTotal>1200.00000</MontoTotal><SubTotal>1200.00000</SubTotal><Impuesto>
+                            <Codigo>01</Codigo>
+                            <CodigoTarifa>05</CodigoTarifa>
+                        <Tarifa>4.00</Tarifa><Monto>48.00000</Monto></Impuesto><MontoTotalLinea>1248.00000</MontoTotalLinea></LineaDetalle><LineaDetalle>
+                        <NumeroLinea>3</NumeroLinea>
+                        <Codigo>prod-0001</Codigo><CodigoComercial>
+                            <Tipo>01</Tipo>
+                            <Codigo>prod-0001</Codigo>
+                        </CodigoComercial><Cantidad>1</Cantidad>
+                    <UnidadMedida>N</UnidadMedida><UnidadMedidaComercial>prueba</UnidadMedidaComercial><Detalle>Producto 1</Detalle>
+                        <PrecioUnitario>1200.00000</PrecioUnitario>
+                        <MontoTotal>1200.00000</MontoTotal><SubTotal>1200.00000</SubTotal><Impuesto>
+                            <Codigo>01</Codigo>
+                            <CodigoTarifa>05</CodigoTarifa>
+                        <Tarifa>4.00</Tarifa><Monto>48.00000</Monto></Impuesto><MontoTotalLinea>1248.00000</MontoTotalLinea></LineaDetalle></DetalleServicio><ResumenFactura><CodigoTipoMoneda>
+                                    <CodigoMoneda>CRC</CodigoMoneda>
+                                    <TipoCambio>587.370</TipoCambio>
+                                </CodigoTipoMoneda><TotalServGravados>0.00000</TotalServGravados>
+                                    <TotalServExentos>0.00000</TotalServExentos>
+                                    <TotalServExonerado>0.00000</TotalServExonerado>
+                                    <TotalMercanciasGravadas>3600.00000</TotalMercanciasGravadas>
+                                    <TotalMercanciasExentas>0.00000</TotalMercanciasExentas>
+                                    <TotalMercExonerada>0.00000</TotalMercExonerada>
+                                    <TotalGravado>3600.00000</TotalGravado>
+                                    <TotalExento>0.00000</TotalExento>
+                                    <TotalExonerado>0.00000</TotalExonerado>
+                                    <TotalVenta>3600.00000</TotalVenta>
+                                    <TotalDescuentos>0.00000</TotalDescuentos>
+                                    <TotalVentaNeta>3600.00000</TotalVentaNeta>
+                                    <TotalImpuesto>144.00000</TotalImpuesto><TotalComprobante>3744.00000</TotalComprobante></ResumenFactura><ds:Signature Id="id-02d4f882f8ce" xmlns:ds="http://www.w3.org/2000/09/xmldsig#"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference Id="Reference-c8f0e61d-8627-4fbf-bcd4-e402ec71bf23" URI=""><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>QqOQ3QEdQcvyH7slkMu6NQN5hWs8YW34lJI9vMyZEgg=</ds:DigestValue></ds:Reference><ds:Reference URI="#xades-id-02d4f882f8ce" Type="http://uri.etsi.org/01903#SignedProperties"><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>LgYMLfO91FCSvcdJq8Wk0RK//ryhFJ5Hlx82SP6njMY=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>MmXy0deh4nZ5StVljzkLzgFdUet8Tjtf4UYLUwZPN9ocTMhzeQS5XN4/cEryWy1GwwHvSVidvIn+2+DvvVCfMyj0mUzKcfZmEewsUeg0ccxiprcw+AKRo/v09H+nLvnJxC3BdHe57sPJVi6Uij8Zr/Z/w1Sd9k0mL5K87+nh2lOBAAH2NJvHXItvAUOaLubObRGEJ6yV79Sa3fd0FDxZku8jYwrS5FaE5yz39RBKCZk12IkF0kfFG+6zj2QGzMBBM3V+qe+1Pz+sbLxEKA7gscuM3nfa3ZGp2ya+VZqfBGQKzhrNLLaFsn9L1ofv67Bj/v3xp88VaRUV6lWS7T6EuA==</ds:SignatureValue><ds:KeyInfo><ds:KeyValue><ds:RSAKeyValue><ds:Modulus>m+bK7elljJsPC1Fl15gePyT7Dtjef7EJI4tw6caZmmUL55gy+qi03u3KUBV5caldLNEHhLW9OYdtdpA2FsquhhjJBsNMWTz2pBDLQu10uUS0L9i/ThjZud1+qcTyesiQXxivPDqRIdfysap6+jcupdsh2+I5/UTfOERjC5+pSqn7b/DO+iASzcahhKq+hsw7Svqjevaar3EklUe9xKHOE8ZNzRpmyC56D/G9uHwvQ3QJRAX/Z4yibBKNkfbZgKzMqBjsBGe2Rcf+/+3bZJIpqDrxYOpw6GE0n+z/hCYOOA7ms+X/0ErBLHOTF0UF8Ts3+I0hrmbzkENpzegYe5Gv+Q==</ds:Modulus><ds:Exponent>AQAB</ds:Exponent></ds:RSAKeyValue></ds:KeyValue><ds:X509Data><ds:X509Certificate>MIIFWzCCA0OgAwIBAgIGAXEoNWIsMA0GCSqGSIb3DQEBCwUAMGwxCzAJBgNVBAYTAkNSMSkwJwYDVQQKDCBNSU5JU1RFUklPIERFIEhBQ0lFTkRBIC0gU0FOREJPWDEMMAoGA1UECwwDREdUMSQwIgYDVQQDDBtDQSBQRVJTT05BIEZJU0lDQSAtIFNBTkRCT1gwHhcNMjAwMzI5MjEzMTU5WhcNMjIwMzI5MjEzMTU5WjCBozEZMBcGA1UEBRMQQ1BGLTAxLTE0ODItMDg3NTEaMBgGA1UEBAwRUk9EUklHVUVaIFZFTkVHQVMxETAPBgNVBCoMCE5BVEFOSUVMMQswCQYDVQQGEwJDUjEXMBUGA1UECgwOUEVSU09OQSBGSVNJQ0ExDDAKBgNVBAsMA0NQRjEjMCEGA1UEAwwaTkFUQU5JRUwgUk9EUklHVUVaIFZFTkVHQVMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCb5srt6WWMmw8LUWXXmB4/JPsO2N5/sQkji3DpxpmaZQvnmDL6qLTe7cpQFXlxqV0s0QeEtb05h212kDYWyq6GGMkGw0xZPPakEMtC7XS5RLQv2L9OGNm53X6pxPJ6yJBfGK88OpEh1/Kxqnr6Ny6l2yHb4jn9RN84RGMLn6lKqftv8M76IBLNxqGEqr6GzDtK+qN69pqvcSSVR73Eoc4Txk3NGmbILnoP8b24fC9DdAlEBf9njKJsEo2R9tmArMyoGOwEZ7ZFx/7/7dtkkimoOvFg6nDoYTSf7P+EJg44Duaz5f/QSsEsc5MXRQXxOzf4jSGuZvOQQ2nN6Bh7ka/5AgMBAAGjgcowgccwHwYDVR0jBBgwFoAURiPSRE+/V1kh5L+T1TCblUzj94cwHQYDVR0OBBYEFEVQxhOmnmrkLQqie9e4IHvwxkbnMAsGA1UdDwQEAwIGwDATBgNVHSUEDDAKBggrBgEFBQcDBDBjBggrBgEFBQcBAQRXMFUwUwYIKwYBBQUHMAKGR2h0dHBzOi8vcGtpLmNvbXByb2JhbnRlc2VsZWN0cm9uaWNvcy5nby5jci9zdGFnL2ludGVybWVkaWF0ZS1wZi1wZW0uY3J0MA0GCSqGSIb3DQEBCwUAA4ICAQAZlIzKoANRN52kUU5flA2ktYgC08cvhdbpcM9ihAfJVTnCQv5fCC/LM9afsSRGP7kW/AbdnIMNC+isNcAJ06gAtTJu5cOITfZzpbinHPMaJcuIfI5PxNYKfIYtxGlZ4UMS14k8K+KCDlDm9ZN8UQ0DMZx8FlZKVN75FgTKby9bcD7QRoN7Xwtx1Do4GFMpAQZo7rEuqbYcmck7lluhmbMnVqtqCPXXdpf5+4BKP63qTu8dlh9lfGTbJAoONl0SxdiRTXI65Cbucopy1vBr6W8OWYZVe4Ig/BQ0b4ZFbl/lLbS1c4JDOUIa+Tc5f3BVZyUwQ+6JkmGpyzLSE4DCeSsx41E4K4zDX0rZm5GvL/2gK9iVYgK85nUTYDVHaTmVraSnPJMlM3XAfk27tkes5YDs1iAMz1fsC+BeTfbje8owlL+N8/j6hJ06lZ1mcWI4+FgriHeGBkyzGwv2ojvoP7aeIdmfIaZN1un0hEadqtrO2ndw2lFUHLy4plLS9KhJW0BBe+8f6pahWZIqTigLPUVOLElZAIEenYJyRDXrbcb22vmfu9G3zUgmInnl9q7MqLgPnVXMzLFBooKoJ2UakihcrCOuZhroe/sNwGCAg4eitMPDXib1C2bQOJw7W6+ODOZnUagbo/tgdgvcRjk5kdsWAnA7R4Y+rEpPJrLSjUGM4w==</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties Target="#id-02d4f882f8ce" xmlns:xades="http://uri.etsi.org/01903/v1.3.2#"><xades:SignedProperties Id="xades-id-02d4f882f8ce"><xades:SignedSignatureProperties><xades:SigningTime>2020-03-31T17:52:11.792Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>E39XVxVMxcGvOMsrMfu6/1WjyU9gq92S+hsLV5MhDMg=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>C=CR, O=MINISTERIO DE HACIENDA - SANDBOX, OU=DGT, CN=CA PERSONA FISICA - SANDBOX</ds:X509IssuerName><ds:X509SerialNumber>1585517519404</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate><xades:SignaturePolicyIdentifier><xades:SignaturePolicyId><xades:SigPolicyId><xades:Identifier Qualifier="OIDAsURI">https://tribunet.hacienda.go.cr/docs/esquemas/2016/v4/Resolucion%20Comprobantes%20Electronicos%20%20DGT-R-48-2016.pdf</xades:Identifier></xades:SigPolicyId><xades:SigPolicyHash><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>XP3WH17Ax7dgban74dCDMegMDyw=</ds:DigestValue></xades:SigPolicyHash></xades:SignaturePolicyId></xades:SignaturePolicyIdentifier><xades:SignerRole><xades:ClaimedRoles><xades:ClaimedRole>ObligadoTributario</xades:ClaimedRole></xades:ClaimedRoles></xades:SignerRole></xades:SignedSignatureProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></FacturaElectronica>

@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../lectorcorreos"
+		},
+		{
+			"path": "../FrontendFA"
+		}
+	],
+	"settings": {}
+}
