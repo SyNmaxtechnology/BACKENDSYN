@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+                <TiqueteElectronico xmlns="https://cdn.comprobanteselectronicos.go.cr/xml-schemas/v4.3/tiqueteElectronico" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <Clave>50605072500310186337500100010040000058343100155911</Clave>
+                <CodigoActividad>552002</CodigoActividad>
+                <NumeroConsecutivo>00100010040000058343</NumeroConsecutivo>
+                <FechaEmision>2025-07-05T19:57:35</FechaEmision>
+                <Emisor>
+                    <Nombre>INVERSIONES NUNEZ Y CAMACHO,S.A.</Nombre>
+                    <Identificacion>
+                        <Tipo>02</Tipo>
+                        <Numero>3101863375</Numero>
+                    </Identificacion>
+                    <NombreComercial>POLLOTE CERVANTES</NombreComercial>
+                    <Ubicacion>
+                        <Provincia>3</Provincia>
+                        <Canton>06</Canton>
+                        <Distrito>02</Distrito>
+                        <Barrio>06</Barrio>
+                        <OtrasSenas>COSTADO SURESTE DE LA IGLESIA</OtrasSenas>
+                    </Ubicacion><Telefono>
+                            <CodigoPais>506</CodigoPais>
+                            <NumTelefono>25347575</NumTelefono>
+                        </Telefono><CorreoElectronico>pollote-cervantes@outlook.es</CorreoElectronico></Emisor><CondicionVenta>01</CondicionVenta><MedioPago>01</MedioPago><DetalleServicio><LineaDetalle>
+                            <NumeroLinea>1</NumeroLinea>
+                            <Codigo>2118603000000</Codigo><CodigoComercial>
+                                <Tipo>01</Tipo>
+                                <Codigo>000160</Codigo>
+                            </CodigoComercial><Cantidad>1.000</Cantidad>
+                        <UnidadMedida>Unid</UnidadMedida><UnidadMedidaComercial>Unid</UnidadMedidaComercial><Detalle>Orden arroz c/pollo</Detalle>
+                            <PrecioUnitario>1460.18000</PrecioUnitario>
+                            <MontoTotal>1460.18000</MontoTotal><SubTotal>1460.18000</SubTotal><Impuesto>
+                                <Codigo>01</Codigo>
+                                <CodigoTarifa>08</CodigoTarifa>
+                            <Tarifa>13.00</Tarifa><Monto>189.82000</Monto></Impuesto><MontoTotalLinea>1650.00000</MontoTotalLinea></LineaDetalle></DetalleServicio><ResumenFactura><CodigoTipoMoneda>
+                            <CodigoMoneda>CRC</CodigoMoneda>
+                            <TipoCambio>508.24</TipoCambio>
+                        </CodigoTipoMoneda><TotalServGravados>0.00000</TotalServGravados>
+                        <TotalServExentos>0.00000</TotalServExentos>
+                        <TotalServExonerado>0.00000</TotalServExonerado>
+                        <TotalMercanciasGravadas>1460.18000</TotalMercanciasGravadas>
+                        <TotalMercanciasExentas>0.00000</TotalMercanciasExentas>
+                        <TotalMercExonerada>0.00000</TotalMercExonerada>
+                        <TotalGravado>1460.18000</TotalGravado>
+                        <TotalExento>0.00000</TotalExento>
+                        <TotalExonerado>0.00000</TotalExonerado>
+                        <TotalVenta>1460.18000</TotalVenta>
+                        <TotalDescuentos>0.00000</TotalDescuentos>
+                        <TotalVentaNeta>1460.18000</TotalVentaNeta>
+                        <TotalImpuesto>189.82000</TotalImpuesto><TotalComprobante>1650.00000</TotalComprobante></ResumenFactura><ds:Signature Id="id-9602308f1084" xmlns:ds="http://www.w3.org/2000/09/xmldsig#"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference Id="Reference-deaee53d-2e58-45f3-8d79-90d2fbef584b" URI=""><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>yO+Y+tXKFdFfkeSWoz0iMZBAbcuOdXB9E6kTsvV2+/E=</ds:DigestValue></ds:Reference><ds:Reference URI="#xades-id-9602308f1084" Type="http://uri.etsi.org/01903#SignedProperties"><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>W0+cr5FyY/JaJylzi4AIpcH9EZ44hWjbohxCxXRPKvQ=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>nGoWzATjTSiZ1tYQ5ResyIPWgUhjFVhMCMLneWNJsGq5MoZrbNY+HGfYPZ6r3IABmIexJ9qtlQXp2U47Bxrg/Vp4LtqmhNE3D3AiMHWW6lJuSSf8gMnuUFJCaIeJ9dYnbonVUM0Ve9ZITGTZDR9ZzzAokdcOpNq7cHJkikYfuSE20gHSibnIjBHTIIwYPObKu4SjyoKXbvTzMrOIL3GvbFmwH3PNjcYUoNldr/wH1iv64Csrqz4Rt9hlg8pyDWyECcbB+BjvM8WMY1m7b8SyPWMGVuJZ3Bgkws286MS4y1c6gEBU+m6MW5hyvULOz1xUuJoroDbPEvPk5xHs2o0Esg==</ds:SignatureValue><ds:KeyInfo><ds:KeyValue><ds:RSAKeyValue><ds:Modulus>okPCRq4XcwIbv/yxAKpqjMoKdsHFZwzCBI7avGz9K5DdHEnKQD38iKticgMeE4FAsozZTKeh9HiY/+3Lld00nq6XdrFd2zaI98LST/ggwjeBqiOR7rYm7yVRZ00nl5+SLdVMQdn9k6CXAu5xaIyhSQCDY0UaBCXyamuIn8ULcMklSIJKnOw6W8tmTrdb6Iw9e0UbcXTS7n6PmIM2oHypEVVwVzlAI8p+uKl/f0RsV1ezsx/XU/hIx1Ey5KXynsZqr8eNWlTbnoq6uBvzgwVvijd4r9awxNE5juIkkcFALGaIOyQku0pmwscr1sV7yDJx5efki1m3nffPrRXT+S8gDw==</ds:Modulus><ds:Exponent>AQAB</ds:Exponent></ds:RSAKeyValue></ds:KeyValue><ds:X509Data><ds:X509Certificate>MIIFMDCCAxigAwIBAgIGAYQv/Nu9MA0GCSqGSIb3DQEBCwUAMFoxCzAJBgNVBAYTAkNSMR8wHQYDVQQKDBZNSU5JU1RFUklPIERFIEhBQ0lFTkRBMQwwCgYDVQQLDANER1QxHDAaBgNVBAMME0NBIFBFUlNPTkEgSlVSSURJQ0EwHhcNMjIxMDMxMjE0MDExWhcNMjYxMDMwMjE0MDExWjCBijEZMBcGA1UEBRMQQ1BKLTMtMTAxLTg2MzM3NTELMAkGA1UEBhMCQ1IxGTAXBgNVBAoMEFBFUlNPTkEgSlVSSURJQ0ExDDAKBgNVBAsMA0NQSjE3MDUGA1UEAwwuSU5WRVJTSU9ORVMgTlVuRVogWSBDQU1BQ0hPICAgU09DSUVEQUQgQU5PTklNQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKJDwkauF3MCG7/8sQCqaozKCnbBxWcMwgSO2rxs/SuQ3RxJykA9/IirYnIDHhOBQLKM2UynofR4mP/ty5XdNJ6ul3axXds2iPfC0k/4IMI3gaojke62Ju8lUWdNJ5efki3VTEHZ/ZOglwLucWiMoUkAg2NFGgQl8mpriJ/FC3DJJUiCSpzsOlvLZk63W+iMPXtFG3F00u5+j5iDNqB8qRFVcFc5QCPKfripf39EbFdXs7Mf11P4SMdRMuSl8p7Gaq/HjVpU256Kurgb84MFb4o3eK/WsMTROY7iJJHBQCxmiDskJLtKZsLHK9bFe8gyceXn5ItZt533z60V0/kvIA8CAwEAAaOByjCBxzAfBgNVHSMEGDAWgBQ7bVf11nzpnhACIEHjvRrMz7NOlTAdBgNVHQ4EFgQUL3d2M2GMcEb33ttYlfv1snss2+IwCwYDVR0PBAQDAgbAMBMGA1UdJQQMMAoGCCsGAQUFBwMEMGMGCCsGAQUFBwEBBFcwVTBTBggrBgEFBQcwAoZHaHR0cHM6Ly9wa2kuY29tcHJvYmFudGVzZWxlY3Ryb25pY29zLmdvLmNyL3Byb2QvaW50ZXJtZWRpYXRlLXBqLXBlbS5jcnQwDQYJKoZIhvcNAQELBQADggIBAAeic49A+CmrnVI32SAr2RI7F3uj/xR57B7nDRgkDefL8metlWbJg9qQAfvhxaIl6WkPo/Zzp/oaiGX36W3FlOsNI6Nxlbbx+RX1ler8qSmyWelhHboi8bwTFYGhpG23TSqEw0QAUvF8tgspl/6akNuRDAWXKmaZnR5I+us4ntsNKCbPJ/J+gnjeiv8JdvGNSRgziwpGSQFLhXWL5j5YM04bZN4MEzs0BrY5hrpuD8U2Bqf+Xv1J9OEtU9UgkdGlMEfuoyk/MGJ2H8b22q5ZINnAF8p6IxTgv2pn4fktKQ7uvgG1ggff+F59UNHE07staIyILGMcJsG7oV+EDy3zCnsD3HrpFa0ItgQ80jcBHyuOu9HsHWH8r2WZRzKLZpEMp0DLd288Fnx9yiVogTqHOBRkMIfC+ri6V2gIBexIeLgjGsBOwn3L7Kpk+iKFEFq9uyQ/Abg1c5ftypEpjfciPI5bopHVBX4381FfGanzFyouk05bRCPdbC6RwM0OtNjvdZZ3D2jJVMrwEguOpjMxYxOaBWsTMaBhnCk9mfdH2K/EREgjB7FXYYNmsUiKzq24Sr0rvjJAdpM59JmHy6EOwJMx9UPvaJ+V7zx735AhmTn44AEJcvPn1an5XmCEIbfp+g8pX69YJDuPd/TSA8hTmrla5rTgfW2ieGKb5fWuyI0U</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties Target="#id-9602308f1084" xmlns:xades="http://uri.etsi.org/01903/v1.3.2#"><xades:SignedProperties Id="xades-id-9602308f1084"><xades:SignedSignatureProperties><xades:SigningTime>2025-07-17T15:23:39.618Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>BlnmbBdNLfegh1uhJt938Bpby+sn25yiadgx6GPlqIU=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>C=CR, O=MINISTERIO DE HACIENDA, OU=DGT, CN=CA PERSONA JURIDICA</ds:X509IssuerName><ds:X509SerialNumber>1667252411325</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate><xades:SignaturePolicyIdentifier><xades:SignaturePolicyId><xades:SigPolicyId><xades:Identifier Qualifier="OIDAsURI">https://tribunet.hacienda.go.cr/docs/esquemas/2016/v4/Resolucion%20Comprobantes%20Electronicos%20%20DGT-R-48-2016.pdf</xades:Identifier></xades:SigPolicyId><xades:SigPolicyHash><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>XP3WH17Ax7dgban74dCDMegMDyw=</ds:DigestValue></xades:SigPolicyHash></xades:SignaturePolicyId></xades:SignaturePolicyIdentifier><xades:SignerRole><xades:ClaimedRoles><xades:ClaimedRole>ObligadoTributario</xades:ClaimedRole></xades:ClaimedRoles></xades:SignerRole></xades:SignedSignatureProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></TiqueteElectronico>
