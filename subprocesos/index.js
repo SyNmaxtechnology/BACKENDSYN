@@ -7,8 +7,8 @@ let contador = 0;//com
 
 setInterval(() => {
     
-    ///contador ++;
-    contador=1;///AGREGADO X SYN
+    contador ++;
+    //contador=1;///AGREGADO X SYN
     if(contador === 1) {
         tipo = 'Facturas';
         contador ++;
