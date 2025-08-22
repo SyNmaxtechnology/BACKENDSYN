@@ -51,7 +51,7 @@ const EncuestaRequerimientoRoutes = require('./routes/EncuestaRequerimiento');
 const ResultadoEncuestaRequerimientoRoutes = require('./routes/ResultadoEncuestaRequerimiento');
 const cantidad = 5;
 
-require("./subprocesos"); ///DESHABILITA LOS JOBS SYN
+//require("./subprocesos"); ///DESHABILITA LOS JOBS SYN
 
 //------------------------- API INTREGADA------------------------------------------------------------------------
 const apiFacturaRoutes = require('./api_registro_facturas/routes/facturaRoute');
