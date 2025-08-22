@@ -61,7 +61,7 @@ const genXMLFactura = (obj, ordenes, llave, clave, idfactura, tipoComprobante) =
             let xml = '';
             //'2020-11-30T22:26:23'.substr(0,10)
             const proveedor_sistemas= "3101335356";
-            const CodigoActividadReceptor = "721001"
+            const CodigoActividadReceptor = "552004"
             const fechaTipoCambio = obj.fecha_factura.substr(0,10);
             const response = await tipoCambioController.obtenerTipoCambio(fechaTipoCambio);
             xml = `<?xml version="1.0" encoding="utf-8"?>
@@ -1063,7 +1063,7 @@ const genNotaCredito = (obj, ordenes, llave, clave, idfactura, tipoComprobante) 
                 <CodigoActividadEmisor>${obj.codigo_actividad}</CodigoActividadEmisor>`;
                 //se agrega Codigo actividad Receptor cambio 4.4
                 if (cliente != null) {                    
-                    xml += `<CodigoActividadReceptor>722003</CodigoActividadReceptor>`;
+                    xml += `<CodigoActividadReceptor>552004</CodigoActividadReceptor>`;
                 }
                 xml += `<NumeroConsecutivo>${obj.consecutivo}</NumeroConsecutivo>
                 <FechaEmision>${obj.fecha_factura}</FechaEmision>
@@ -1507,7 +1507,7 @@ const genXMLFacturaCompra = (obj, ordenes, llave, clave, idfactura, tipoComproba
 
         const fechaTipoCambio = obj.fecha_factura.substr(0,10);
         const response = await tipoCambioController.obtenerTipoCambio(fechaTipoCambio);
-        const CodigoActividadReceptor = "721001";
+        const CodigoActividadReceptor = "552004";
         const proveedor_sistemas= "3101335356";
         xml = `<?xml version="1.0" encoding="utf-8"?>
                 <FacturaElectronicaCompra xmlns="https://cdn.comprobanteselectronicos.go.cr/xml-schemas/v4.4/facturaElectronicaCompra" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\n`;
@@ -1836,7 +1836,7 @@ const genXMLFacturaCompraReemplazo = (obj, ordenes, llave, clave, idfactura, tip
 
         const fechaTipoCambio = obj.fecha_factura.substr(0,10);
         const response = await tipoCambioController.obtenerTipoCambio(fechaTipoCambio);
-        const CodigoActividadReceptor = "721001";
+        const CodigoActividadReceptor = "552004";
         const proveedor_sistemas= "3101335356";
         const barrio = "Central";
 
@@ -2169,7 +2169,7 @@ const genXMLFacturaCompraAnular = (obj, ordenes, llave, clave, idfactura, tipoCo
         */
         
         let xml = '';
-        const CodigoActividadReceptor = "721001";
+        const CodigoActividadReceptor = "552004";
         const proveedor_sistemas= "3101335356";
         const barrio = "Central";
 
