@@ -16,7 +16,7 @@ setInterval(() => {
         tipo = 'FacturasSinCorreo';
         contador ++;  
     } else if (contador === 3) {
-        tipo = 'Entradas';
+        //tipo = 'Entradas';
         contador ++;
          
     } else if (contador === 4) {
