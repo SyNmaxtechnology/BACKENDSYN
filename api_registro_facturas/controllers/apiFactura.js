@@ -223,6 +223,7 @@ const agregarFactura = async (req,res) => {
                         */
 
                         let idcategoria = null;
+                        let iniciacabys = '';
 
                         const existeCategoria = await obtenerCategoriaPorCodigoCabys({idemisor,codigoCabys: lineaFactura.codigoCabys});
 
@@ -235,7 +236,7 @@ const agregarFactura = async (req,res) => {
                                 codigocabys: lineaFactura.codigoCabys,
                                 descripcioncodigo: '' 
                             }
-
+                            iniciacabys = lineaFactura.codigoCabys;
                             const nuevaCategoriaResponse = await nuevaCategoria(categoriaObj);
 
                             if(nuevaCategoriaResponse.affectedRows === 0) {
@@ -251,8 +252,10 @@ const agregarFactura = async (req,res) => {
 
                         } else  {
                             idcategoria = existeCategoria[0].id;
+                            iniciacabys = existeCategoria[0].codigoCabys;
                         }
 
+                        iniciacabys = iniciacabys.substring(0,1)
                         nuevoProductoObj.idemisor = idemisor;
                         //nuevoProductoObj.idsuperusuario = idusuario;
                         nuevoProductoObj.idcategoria = idcategoria;
@@ -264,18 +267,20 @@ const agregarFactura = async (req,res) => {
                         
                         nuevoProductoObj.codigoBarra = lineaFactura.codigoBarraProducto.trim();
 
-                        if(!UnidadesMedidaServicios.includes(lineaFactura.unidadMedida)) {
+                        //if(!UnidadesMedidaServicios.includes(lineaFactura.unidadMedida) && iniciacabys < '6') {
+                        //cambio SYN 4.4
+                        if(iniciacabys < '6') {
 
                             nuevoProductoObj.unidad_medida = lineaFactura.unidadMedida;
                             nuevoProductoObj.unidad_medida_comercial = '';
-                            nuevoProductoObj.tipo_servicio = '02';
+                            nuevoProductoObj.tipo_servicio = '01';
                             nuevoProductoObj.codigo_servicio = 'Mercancía';
                         } else {
 
                             nuevoProductoObj.unidad_medida = lineaFactura.unidadMedida;
                             nuevoProductoObj.unidad_medida_comercial = !lineaFactura.unidadMedidaComercial ? '': lineaFactura.unidadMedidaComercial;
-                            nuevoProductoObj.tipo_servicio = '01';
-                            nuevoProductoObj.codigo_servicio = 'Servicio';
+                            nuevoProductoObj.tipo_servicio = '04';
+                            nuevoProductoObj.codigo_servicio = 'Codigo uso interno';
                         }
                         
                         let impuesto = await obtenerImpuestoPorCodigo(idemisor,lineaFactura.codigo_tarifa);

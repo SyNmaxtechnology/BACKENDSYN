@@ -408,7 +408,8 @@ Factura.obtenerIntentosEnvio = (id) => {
 
 Factura.facturasAceptadasSinEnviarPorCorreo = (desde, cantidadRegistros) => {
     return new Promise((resolve, reject) => { //
-        pool.query("SELECT f.id, f.tipo_factura,f.idemisor, f.correo FROM  Factura f, Emisor e  WHERE f.idemisor='1' AND f.correo = 0  AND f.idemisor = e.id AND f.status_factura = 'aceptado'  AND f.tipo_factura = '01' AND e.estado_emisor = 1 AND e.client_id = 'api-prod' LIMIT ? ,?", [desde, cantidadRegistros], (err, rows, fields) => {
+        //ELIMINA  f.idemisor='1' del select
+        pool.query("SELECT f.id, f.tipo_factura,f.idemisor, f.correo FROM  Factura f, Emisor e  WHERE  f.correo = 0  AND f.idemisor = e.id AND f.status_factura = 'aceptado'  AND f.tipo_factura = '01' AND e.estado_emisor = 1 AND e.client_id = 'api-prod' LIMIT ? ,?", [desde, cantidadRegistros], (err, rows, fields) => {
             console.log(err);
             if (err) {
                 return reject(err);
