@@ -8,6 +8,7 @@ let contador = 0;//com
 setInterval(() => {
     
     contador ++;
+    console.log('Contador', contador);
     //contador=1;///AGREGADO X SYN
     if(contador === 1) {
         tipo = 'Facturas';
