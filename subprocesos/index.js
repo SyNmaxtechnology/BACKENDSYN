@@ -3,11 +3,11 @@ const child = fork(__dirname + '/../controllers/FacturasNoEnvidasController',{
     detached: true
 });
 let tipo = '';
-let contador = 0;//com
+let contador = 1;//com
 
 setInterval(() => {
     
-    contador ++;
+    //contador ++; //DESACTIVA SYN
     console.log('Contador', contador);
     //contador=1;///AGREGADO X SYN
     if(contador === 1) {
