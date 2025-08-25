@@ -22,7 +22,7 @@ setInterval(() => {
          
     } else if (contador === 4) {
         tipo = 'NotaCredito';
-        contador = 0;
+        contador = 1;
     } 
     
     child.send(tipo);
