@@ -74,6 +74,29 @@ const existeTipoCambio = (fecha) => {
     })
 }
 
+//AGREGA SYN VERSION 4.4
+const obtenerActividad =  (cedula) => {
+
+    return new Promise ((resolve,reject) => {
+
+        const url = `https://apis.gometa.org/cedulas/${cedula}`;
+       //const url = `https://api.hacienda.go.cr/fe/ae?identificacion=${cedula}`;
+        const options = {
+            method: "GET",
+            url
+        }
+
+        axios(options).then(response => {
+            console.log(response);
+            resolve(response);
+        })
+        .catch(err => {
+            console.log(err);
+            reject(err)
+        });       
+    })
+}
+
 
 const obtenerTipoCambioPorFecha =  (fecha) => {
 
@@ -114,5 +137,6 @@ module.exports = {
     existeTipoCambio,
     obtenerTipoCambio,
     obtenerTipoCambioPorFecha,
-    obtenerTipoCambioActual
+    obtenerTipoCambioActual,
+    obtenerActividad
 };

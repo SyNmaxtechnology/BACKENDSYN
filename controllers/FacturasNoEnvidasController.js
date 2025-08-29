@@ -51,11 +51,15 @@ const actualizarTipoCambioEntradas = async () => {
     try {
         const entradas = await EntradaController.obtenerEntradasParaActualizarTipoCambio();
         for(let entrada of entradas){
+            let tc=1
             const {fecha} = entrada;
             console.log(fecha);
-            const { venta } = await tipoCambioController.obtenerTipoCambioPorFecha(fecha);
+            const  venta  = await tipoCambioController.obtenerTipoCambioPorFecha(fecha);
             console.log(venta);
-            const response = await EntradaController.actualizarTipoCambio({fecha, tipocambio:venta}) ;
+            if (venta){
+                tc=venta.compra
+            }
+            const response = await EntradaController.actualizarTipoCambio({fecha, tipocambio:tc}) ;
             console.log(response);
         }   
     } catch (error) {

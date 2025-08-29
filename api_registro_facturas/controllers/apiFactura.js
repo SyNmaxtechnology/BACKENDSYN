@@ -100,7 +100,7 @@ const agregarFactura = async (req,res) => {
                 nuevoClienteObj.cliente_nombre = cliente.nombre;
                 nuevoClienteObj.IdentificacionExtranjero = '';
                 nuevoClienteObj.cliente_nombre_comercial = '';
-                nuevoClienteObj.otras_senas = 'Señas'
+                nuevoClienteObj.otras_senas = 'NO DEFINIDO'
                 nuevoClienteObj.otrasotras_senas_extranjero_senas = '';
                 nuevoClienteObj.cliente_telefono_codigopais = '';
                 nuevoClienteObj.cliente_telefono_numtelefono = '';
@@ -115,6 +115,9 @@ const agregarFactura = async (req,res) => {
                 nuevoClienteObj.NombreInstitucion= cliente.NombreInstitucion;
                 nuevoClienteObj.documentoExoneracion= cliente.documentoExoneracion;
                 nuevoClienteObj.fechaEmision= cliente.fechaEmision;
+                //AGREGA CAMBIO SYN CAMBIOS 4.4
+                nuevoClienteObj.codactividad= cliente.codactrec;
+
                // console.log(cliente); return;
                 const nuevoClienteResponse = await nuevoCliente(nuevoClienteObj)
 
@@ -267,14 +270,14 @@ const agregarFactura = async (req,res) => {
                         
                         nuevoProductoObj.codigoBarra = lineaFactura.codigoBarraProducto.trim();
 
-                        //if(!UnidadesMedidaServicios.includes(lineaFactura.unidadMedida) && iniciacabys < '6') {
+                        
                         //cambio SYN 4.4
-                        if(iniciacabys < '6') {
-
+                        //if(iniciacabys < '6') {
+                        if(!UnidadesMedidaServicios.includes(lineaFactura.unidadMedida)) {
                             nuevoProductoObj.unidad_medida = lineaFactura.unidadMedida;
                             nuevoProductoObj.unidad_medida_comercial = '';
-                            nuevoProductoObj.tipo_servicio = '01';
-                            nuevoProductoObj.codigo_servicio = 'Mercancía';
+                            nuevoProductoObj.tipo_servicio = '04';
+                            nuevoProductoObj.codigo_servicio = 'Codigo uso interno';
                         } else {
 
                             nuevoProductoObj.unidad_medida = lineaFactura.unidadMedida;

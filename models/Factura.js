@@ -216,8 +216,8 @@ Factura.obtenerDatosFactura = (obj) => {
                 e.emisor_correo,e.file_p12,e.pin_p12,e.key_username_hacienda, e.key_password_hacienda,e.codigo_actividad, 
                 e.tipo_codigo_servicio, e.codigo_servicio, e.Client_ID, e.API, e.TOKEN_API, e.numeroresolucion, e.fecharesolucion,
                 (IF (nc.idcliente <> ${idcliente} AND nc.idcliente <> 1,(SELECT JSON_OBJECT('cliente_nombre',c.cliente_nombre,'cliente_nombre_comercial', 
-                c.cliente_nombre_comercial,'cliente_tipo_identificacion', c.cliente_tipo_identificacion,'cedula_cliente',
-                c.cedula_cliente,'numero_cliente', c.numero_cliente,'identificacion_extranjero', c.identificacion_extranjero,
+                c.cliente_nombre_comercial,'cliente_tipo_identificacion', c.cliente_tipo_identificacion,'CodActividad',c.CodActRec,'ArtExonera',c.ArtExo,'IncisoExo',c.IncisoExo,'InstiExo',c.InstExo,
+                'cedula_cliente',c.cedula_cliente,'numero_cliente', c.numero_cliente,'identificacion_extranjero', c.identificacion_extranjero,
                 'otras_senas', c.otras_senas,'otras_senas_extranjero', c.otras_senas_extranjero,'cliente_telefono_codigopais',
                 c.cliente_telefono_codigopais,'cliente_telefono_numtelefono', c.cliente_telefono_numtelefono,'cliente_fax_codigopais',
                 c.cliente_fax_codigopais,'cliente_fax_numtelefono',c.cliente_fax_numtelefono,'cliente_correo',c.cliente_correo,
@@ -242,13 +242,13 @@ Factura.obtenerDatosFactura = (obj) => {
                 e.emisor_fax_numtelefono, e.emisor_correo,e.file_p12,e.pin_p12,e.key_username_hacienda, e.key_password_hacienda,
                 e.codigo_actividad,e.tipo_codigo_servicio, e.codigo_servicio, e.Client_ID, e.API, e.TOKEN_API, e.numeroresolucion,
                 e.fecharesolucion, (IF (f.idcliente <> ${idcliente} AND f.idcliente <> 1,(SELECT JSON_OBJECT('cliente_nombre',c.cliente_nombre,'cliente_nombre_comercial', 
-                c.cliente_nombre_comercial,'cliente_tipo_identificacion', c.cliente_tipo_identificacion,'cedula_cliente', 
-                c.cedula_cliente,'numero_cliente', c.numero_cliente,'identificacion_extranjero', c.identificacion_extranjero,'otras_senas',
+                c.cliente_nombre_comercial,'cliente_tipo_identificacion', c.cliente_tipo_identificacion,'CodActividad',c.CodActRec,'ArtExonera',c.ArtExo,'IncisoExo',c.IncisoExo,'InstiExo',c.InstExo,
+                'cedula_cliente', c.cedula_cliente,'numero_cliente', c.numero_cliente,'identificacion_extranjero', c.identificacion_extranjero,'otras_senas',
                 c.otras_senas,'otras_senas_extranjero', c.otras_senas_extranjero,'cliente_telefono_codigopais',c.cliente_telefono_codigopais,
                 'cliente_telefono_numtelefono', c.cliente_telefono_numtelefono,'cliente_fax_codigopais',c.cliente_fax_codigopais,
                 'cliente_fax_numtelefono', c.cliente_fax_numtelefono,'cliente_correo',c.cliente_correo,'TipoDocumentoExoneracion',
                 c.tipoExoneracion, 'documentoExoneracion',c.documentoExoneracion,'nombreInstitucion',c.NombreInstitucion,'PorcentajeExoneracion',c.porcentajeExoneracion,
-                'FechaEmision',c.fechaEmision,'ubicacion_cliente', (SELECT JSON_OBJECT('provincia', b.provincia,'canton',b.canton,
+                'FechaEmision',c.fechaEmision, 'ubicacion_cliente',(SELECT JSON_OBJECT('provincia', b.provincia,'canton',b.canton,
                 'distrito',b.distrito,'barrio',  b.hacienda) FROM Barrios b 
                     WHERE b.codnew = c.cliente_barrio 
                         AND f.idemisor= e.id 
@@ -286,58 +286,58 @@ Factura.obtenerDatosReporteFactura = (obj) => {
         console.log("id factura de factura", idfactura);
         console.log("tipo de factura ", tipo);
         if (tipo != '03') {
-             // se agregan x cliente panama TipodocRef, NumeroRef, FechaRef, CodigoRef, RazonRef
-            query = `SELECT DISTINCT f.id,f.clavenumerica, f.num_documento, f.consecutivo,f.condicion_venta,f.plazo_credito,f.medio_pago,f.fecha_factura,
-            f.porcentaje_descuento_total,f.monto_descuento_total,f.subtotal,f.totalservgravados,f.totalservexentos,
-            f.totalservexonerado,f.totalmercanciasgravadas,f.totalmercanciasexentas,f.totalmercanciaexonerada, f.totalgravado,
-            f.totalexento, f.totalexonerado,f.totalventa,f.totaldescuentos,f.totalventaneta,f.totalimpuesto,f.totalcomprobante,
-            f.codigomoneda, f.tipocambio,f.tipo_factura,f.TotalOtrosCargos,f.TipodocRef, f.NumeroRef, f.FechaRef, f.CodigoRef, f.RazonRef, e.emisor_nombre, e.emisor_nombrecomercial,  e.cedula_emisor, 
-            e.numero_emisor,e.emisor_tipo_identificacion,(SELECT JSON_OBJECT('provincia',b.provincia,'canton',b.canton,'distrito',
-            b.distrito, 'barrio', b.hacienda) FROM Barrios b WHERE b.codnew = e.emisor_barrio AND f.idemisor=e.id AND f.id= ${idfactura}) AS ubicacion_emisor, e.emisor_otras_senas,
-            e.emisor_telefono_codigopais,e.emisor_telefono_numtelefono,e.emisor_fax_codigopais,e.logo, e.emisor_fax_numtelefono,  
-            e.codigo_actividad,e.emisor_correo,(IF (f.idcliente <> ${idcliente} AND f.idcliente <> 1,(SELECT JSON_OBJECT('cliente_nombre',c.cliente_nombre,
-            'cliente_nombre_comercial', c.cliente_nombre_comercial,'cliente_tipo_identificacion', c.cliente_tipo_identificacion,
-            'cedula_cliente', c.cedula_cliente,'numero_cliente', c.numero_cliente,'identificacion_extranjero',
-            c.identificacion_extranjero,'otras_senas', c.otras_senas,'otras_senas_extranjero', c.otras_senas_extranjero,
-            'cliente_telefono_codigopais',c.cliente_telefono_codigopais,'cliente_telefono_numtelefono', c.cliente_telefono_numtelefono,'TipoDocumentoExoneracion',c.tipoExoneracion,'documentoExoneracion',c.documentoExoneracion,'nombreInstitucion',c.NombreInstitucion,'FechaEmision',c.fechaEmision,
-            'cliente_fax_codigopais',c.cliente_fax_codigopais,'cliente_fax_numtelefono',c.cliente_fax_numtelefono,'cliente_correo',
-            c.cliente_correo,'ubicacion_cliente', (SELECT JSON_OBJECT('provincia', b.provincia,'canton',b.canton,'distrito', b.distrito,
-            'barrio',  b.hacienda) FROM Barrios b WHERE b.codnew = c.cliente_barrio AND f.idemisor=e.id  AND f.id= ${idfactura})) 
-            AS ubicacion_cliente  FROM Cliente c 
-            WHERE f.idcliente=c.id),NULL)) AS datosCliente 
-            FROM Factura f, Emisor e , Cliente c 
-            WHERE f.idemisor=e.id 
-            AND f.id=${idfactura};
-            `;
-        } else {
-            query = `SELECT DISTINCT nc.id,nc.clavenumerica, nc.num_documento ,nc.consecutivo,nc.condicion_venta, nc.medio_pago,nc.fecha_factura, 
-            nc.porcentaje_descuento_total,nc.monto_descuento_total,nc.subtotal,nc.totalservgravados,nc.totalservexentos, 
-            nc.totalservexonerado,nc.totalmercanciasgravadas,nc.totalmercanciasexentas,nc.totalmercanciaexonerada, nc.totalgravado,
-             nc.totalexento, nc.totalexonerado,nc.totalventa,nc.totaldescuentos,nc.totalventaneta,nc.totalimpuesto,nc.totalcomprobante,
-             nc.codigomoneda, nc.tipocambio,nc.tipo_factura,nc.TotalOtrosCargos,nc.fecha_emision, nc.tipoDocReferencia,
-             nc.numeroReferencia, nc.codigo, nc.razon , e.emisor_nombre, e.emisor_nombrecomercial, 
-             e.cedula_emisor, e.numero_emisor,e.emisor_tipo_identificacion,(SELECT JSON_OBJECT('provincia',b.provincia,'canton',b.canton,'distrito', b.distrito, 'barrio', b.hacienda) FROM Barrios b 
-             WHERE b.codnew = e.emisor_barrio
-             AND nc.idemisor= e.id
-             AND nc.id=${idfactura}) AS ubicacion_emisor, 
-             e.emisor_otras_senas,e.codigo_actividad, e.emisor_telefono_codigopais,e.emisor_telefono_numtelefono,e.emisor_fax_codigopais, e.logo,
-             e.emisor_fax_numtelefono,  e.emisor_correo,(IF (nc.idcliente <> ${idcliente} AND nc.idcliente <> 1,(SELECT JSON_OBJECT('cliente_nombre',
-             c.cliente_nombre,'cliente_nombre_comercial', c.cliente_nombre_comercial,'cliente_tipo_identificacion', 
-             c.cliente_tipo_identificacion,'cedula_cliente', c.cedula_cliente,'numero_cliente', c.numero_cliente,
-             'identificacion_extranjero', c.identificacion_extranjero,'otras_senas', c.otras_senas,'otras_senas_extranjero', 
-             c.otras_senas_extranjero,'cliente_telefono_codigopais',c.cliente_telefono_codigopais,'cliente_telefono_numtelefono',
-             c.cliente_telefono_numtelefono,'TipoDocumentoExoneracion',c.tipoExoneracion,'documentoExoneracion',c.documentoExoneracion,'nombreInstitucion',c.NombreInstitucion,'FechaEmision',c.fechaEmision,'cliente_fax_codigopais',c.cliente_fax_codigopais,'cliente_fax_numtelefono',
-             c.cliente_fax_numtelefono,'cliente_correo',c.cliente_correo,'ubicacion_cliente', (SELECT JSON_OBJECT('provincia', 
-             b.provincia,'canton',b.canton,'distrito', b.distrito,'barrio',  b.hacienda) FROM Barrios b 
-             WHERE b.codnew = c.cliente_barrio 
-             AND nc.idemisor= e.id 
-             AND nc.id=${idfactura})) AS ubicacion_cliente
-             FROM Cliente c WHERE nc.idcliente=c.id),NULL))
-             AS datosCliente FROM Nota_Credito nc, Emisor e , Cliente c
-             WHERE nc.idemisor=e.id 
-             AND nc.id = ${idfactura}
-            `;
-        }
+            // se agregan x cliente panama TipodocRef, NumeroRef, FechaRef, CodigoRef, RazonRef
+           query = `SELECT DISTINCT f.id,f.clavenumerica, f.num_documento, f.consecutivo,f.condicion_venta,f.plazo_credito,f.medio_pago,f.fecha_factura,
+           f.porcentaje_descuento_total,f.monto_descuento_total,f.subtotal,f.totalservgravados,f.totalservexentos,
+           f.totalservexonerado,f.totalmercanciasgravadas,f.totalmercanciasexentas,f.totalmercanciaexonerada, f.totalgravado,
+           f.totalexento, f.totalexonerado,f.totalventa,f.totaldescuentos,f.totalventaneta,f.totalimpuesto,f.totalcomprobante,
+           f.codigomoneda, f.tipocambio,f.tipo_factura,f.TotalOtrosCargos,f.TipodocRef, f.NumeroRef, f.FechaRef, f.CodigoRef, f.RazonRef, e.emisor_nombre, e.emisor_nombrecomercial,  e.cedula_emisor, 
+           e.numero_emisor,e.emisor_tipo_identificacion,(SELECT JSON_OBJECT('provincia',b.provincia,'canton',b.canton,'distrito',
+           b.distrito, 'barrio', b.hacienda) FROM Barrios b WHERE b.codnew = e.emisor_barrio AND f.idemisor=e.id AND f.id= ${idfactura}) AS ubicacion_emisor, e.emisor_otras_senas,
+           e.emisor_telefono_codigopais,e.emisor_telefono_numtelefono,e.emisor_fax_codigopais,e.logo, e.emisor_fax_numtelefono,  
+           e.codigo_actividad,e.emisor_correo,(IF (f.idcliente <> ${idcliente} AND f.idcliente <> 1,(SELECT JSON_OBJECT('cliente_nombre',c.cliente_nombre,
+           'cliente_nombre_comercial', c.cliente_nombre_comercial,'cliente_tipo_identificacion', c.cliente_tipo_identificacion,'CodActividad',c.CodActRec,'ArtExonera',c.ArtExo,'IncisoExo',c.IncisoExo,'InstiExo',c.InstExo,
+           'cedula_cliente', c.cedula_cliente,'numero_cliente', c.numero_cliente,'identificacion_extranjero',
+           c.identificacion_extranjero,'otras_senas', c.otras_senas,'otras_senas_extranjero', c.otras_senas_extranjero,
+           'cliente_telefono_codigopais',c.cliente_telefono_codigopais,'cliente_telefono_numtelefono', c.cliente_telefono_numtelefono,'TipoDocumentoExoneracion',c.tipoExoneracion,'documentoExoneracion',c.documentoExoneracion,'nombreInstitucion',c.NombreInstitucion,'FechaEmision',c.fechaEmision,
+           'cliente_fax_codigopais',c.cliente_fax_codigopais,'cliente_fax_numtelefono',c.cliente_fax_numtelefono,'cliente_correo',
+           c.cliente_correo,'ubicacion_cliente', (SELECT JSON_OBJECT('provincia', b.provincia,'canton',b.canton,'distrito', b.distrito,
+           'barrio',  b.hacienda) FROM Barrios b WHERE b.codnew = c.cliente_barrio AND f.idemisor=e.id  AND f.id= ${idfactura})) 
+           AS ubicacion_cliente  FROM Cliente c 
+           WHERE f.idcliente=c.id),NULL)) AS datosCliente 
+           FROM Factura f, Emisor e , Cliente c 
+           WHERE f.idemisor=e.id 
+           AND f.id=${idfactura};
+           `;
+       } else {
+           query = `SELECT DISTINCT nc.id,nc.clavenumerica, nc.num_documento ,nc.consecutivo,nc.condicion_venta, nc.medio_pago,nc.fecha_factura, 
+           nc.porcentaje_descuento_total,nc.monto_descuento_total,nc.subtotal,nc.totalservgravados,nc.totalservexentos, 
+           nc.totalservexonerado,nc.totalmercanciasgravadas,nc.totalmercanciasexentas,nc.totalmercanciaexonerada, nc.totalgravado,
+            nc.totalexento, nc.totalexonerado,nc.totalventa,nc.totaldescuentos,nc.totalventaneta,nc.totalimpuesto,nc.totalcomprobante,
+            nc.codigomoneda, nc.tipocambio,nc.tipo_factura,nc.TotalOtrosCargos,nc.fecha_emision, nc.tipoDocReferencia,
+            nc.numeroReferencia, nc.codigo, nc.razon , e.emisor_nombre, e.emisor_nombrecomercial, 
+            e.cedula_emisor, e.numero_emisor,e.emisor_tipo_identificacion,(SELECT JSON_OBJECT('provincia',b.provincia,'canton',b.canton,'distrito', b.distrito, 'barrio', b.hacienda) FROM Barrios b 
+            WHERE b.codnew = e.emisor_barrio
+            AND nc.idemisor= e.id
+            AND nc.id=${idfactura}) AS ubicacion_emisor, 
+            e.emisor_otras_senas,e.codigo_actividad, e.emisor_telefono_codigopais,e.emisor_telefono_numtelefono,e.emisor_fax_codigopais, e.logo,
+            e.emisor_fax_numtelefono,  e.emisor_correo,(IF (nc.idcliente <> ${idcliente} AND nc.idcliente <> 1,(SELECT JSON_OBJECT('cliente_nombre',
+            c.cliente_nombre,'cliente_nombre_comercial', c.cliente_nombre_comercial,'CodActividad',c.CodActRec,'ArtExonera',c.ArtExo,'IncisoExo',c.IncisoExo,'InstiExo',c.InstExo,
+            'cliente_tipo_identificacion', c.cliente_tipo_identificacion,'cedula_cliente', c.cedula_cliente,'CodActividad',c.CodActRec,'ArtExonera',
+            'numero_cliente', c.numero_cliente,'identificacion_extranjero', c.identificacion_extranjero,'otras_senas', c.otras_senas,'otras_senas_extranjero', 
+            c.otras_senas_extranjero,'cliente_telefono_codigopais',c.cliente_telefono_codigopais,'cliente_telefono_numtelefono',
+            c.cliente_telefono_numtelefono,'TipoDocumentoExoneracion',c.tipoExoneracion,'documentoExoneracion',c.documentoExoneracion,'nombreInstitucion',c.NombreInstitucion,'FechaEmision',c.fechaEmision,'cliente_fax_codigopais',c.cliente_fax_codigopais,'cliente_fax_numtelefono',
+            c.cliente_fax_numtelefono,'cliente_correo',c.cliente_correo,'ubicacion_cliente', (SELECT JSON_OBJECT('provincia', 
+            b.provincia,'canton',b.canton,'distrito', b.distrito,'barrio',  b.hacienda) FROM Barrios b 
+            WHERE b.codnew = c.cliente_barrio 
+            AND nc.idemisor= e.id 
+            AND nc.id=${idfactura})) AS ubicacion_cliente
+            FROM Cliente c WHERE nc.idcliente=c.id),NULL))
+            AS datosCliente FROM Nota_Credito nc, Emisor e , Cliente c
+            WHERE nc.idemisor=e.id 
+            AND nc.id = ${idfactura}
+           `;
+       }
         pool.query(query, [idfactura], (err, rows, fields) => {
             if (err) {
                 console.log(err);
@@ -1035,7 +1035,7 @@ Factura.paginarFacturasNoEnviadas = (cantidadRegistros, desde) => { //comentario
                 AND e.estado_emisor='1' 
                 AND f.proforma IS NULL 
                 AND e.client_id = 'api-prod' 
-                
+               
                 AND f.tipo_factura='01'             
                 ORDER BY f.tipo_factura,f.id DESC  LIMIT ${desde},${cantidadRegistros}`, [], (err, rows, fields) => { //comentario envie primero las faccturas Y SOLO CODIGO ESTADO NULL **${response[0].prioridadEmisores > 0 ? ' AND e.prioridad = 1' : ''}
                     if (err) {
@@ -1046,13 +1046,13 @@ Factura.paginarFacturasNoEnviadas = (cantidadRegistros, desde) => { //comentario
             }else {
                 pool.query(`SELECT f.id,f.tipo_factura,f.proforma, e.id as idemisor 
                 FROM Factura f, Emisor e 
-                WHERE f.status_factura IS NULL
+                WHERE  f.status_factura IS NULL
                 AND f.idemisor = e.id
                 AND e.estado_emisor = 1
                 AND f.proforma IS NULL 
                 AND e.client_id = 'api-prod'
                 AND f.tipo_factura = '04'   
-                
+               
                 AND f.fecha_factura > '2025-08-01 00:00:00'
                 ORDER BY e.prioridad DESC,f.id  LIMIT ${desde},${cantidadRegistros}`, [], (err, rows, fields) => { //comentario envie primero las faccturas Y SOLO CODIGO ESTADO NULL **${response[0].prioridadEmisores > 0 ? ' AND e.prioridad = 1' : ''}
                     if (err) {

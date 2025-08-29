@@ -60,8 +60,9 @@ const genXMLFactura = (obj, ordenes, llave, clave, idfactura, tipoComprobante) =
             console.log(obj);
             let xml = '';
             //'2020-11-30T22:26:23'.substr(0,10)
+            const cliente = obj.datosCliente != null || typeof obj.datosCliente !== 'undefined'? obj.datosCliente : null; 
             const proveedor_sistemas= "3101335356";
-            const CodigoActividadReceptor = "552004"
+            const CodigoActividadReceptor = await tipoCambioController.obtenerActividad(cliente.cedula_cliente);
             const fechaTipoCambio = obj.fecha_factura.substr(0,10);
             const response = await tipoCambioController.obtenerTipoCambio(fechaTipoCambio);
             xml = `<?xml version="1.0" encoding="utf-8"?>
@@ -69,11 +70,24 @@ const genXMLFactura = (obj, ordenes, llave, clave, idfactura, tipoComprobante) =
             
             /*CAMBIOS 4.4  PROVEEDOR SISTEMA Y CODIGO ACTIVIDD RECEPCION
                 <CodigoActividad>${obj.codigo_actividad}</CodigoActividad>
-            */        
+            */      
+           let codact ='' 
+           
+           if (cliente.CodActividad){
+                codact=cliente.CodActividad
+           } else {
+               
+              /*  if (CodigoActividadReceptor.data.resultcount > 0){
+                    codact= CodigoActividadReceptor.data.actividades[1].codigo
+                } else {*/
+                    codact='721001'
+               // }
+
+            }
             xml += `<Clave>${obj.clavenumerica}</Clave>
                     <ProveedorSistemas>${proveedor_sistemas}</ProveedorSistemas>
                     <CodigoActividadEmisor>${obj.codigo_actividad}</CodigoActividadEmisor>
-                    <CodigoActividadReceptor>${CodigoActividadReceptor}</CodigoActividadReceptor>
+                    <CodigoActividadReceptor>${codact}</CodigoActividadReceptor>
                     
                     <NumeroConsecutivo>${obj.consecutivo}</NumeroConsecutivo>
                     <FechaEmision>${obj.fecha_factura}</FechaEmision>
@@ -114,8 +128,8 @@ const genXMLFactura = (obj, ordenes, llave, clave, idfactura, tipoComprobante) =
     
             xml += `<CorreoElectronico>${obj.emisor_correo}</CorreoElectronico></Emisor>`;
     
-    
-            const cliente = obj.datosCliente != null || typeof obj.datosCliente !== 'undefined'? obj.datosCliente : null; 
+            //cambio SYN se sube al inicio
+            //const cliente = obj.datosCliente != null || typeof obj.datosCliente !== 'undefined'? obj.datosCliente : null; 
             
             if (typeof cliente.cedula_cliente !== 'undefined') {
                 const ubicacion_cliente = cliente.ubicacion_cliente;
@@ -154,13 +168,13 @@ const genXMLFactura = (obj, ordenes, llave, clave, idfactura, tipoComprobante) =
                                 <NumTelefono>${cliente.cliente_telefono_numtelefono}</NumTelefono>
                             </Telefono>`;
                 }
-    
-                if (cliente.cliente_fax_codigopais != null && cliente.cliente_fax_numtelefono > 0) {
+                //CAMBIO SYN DESAHABILIT NODO FAX
+                /*if (cliente.cliente_fax_codigopais != null && cliente.cliente_fax_numtelefono > 0) {
                     xml += `<Fax>
                                 <CodigoPais>${cliente.cliente_fax_codigopais}</CodigoPais>
                                 <NumTelefono>${cliente.cliente_fax_numtelefono}</NumTelefono>
                             </Fax>`;
-                }
+                }*/
     
                 xml += `<CorreoElectronico>${cliente.cliente_correo}</CorreoElectronico></Receptor>`;
                 //--------------------------------

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+                 <TiqueteElectronico xmlns="https://cdn.comprobanteselectronicos.go.cr/xml-schemas/v4.4/tiqueteElectronico" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <Clave>50625082500310133535600100001040000000002163487512</Clave>
+                <ProveedorSistemas>3101335356</ProveedorSistemas>
+                <CodigoActividadEmisor>515201</CodigoActividadEmisor>
+                <NumeroConsecutivo>00100001040000000002</NumeroConsecutivo>
+                <FechaEmision>2025-08-25T10:30:06-05:00</FechaEmision>
+                <Emisor>
+                    <Nombre>SyN Max Technology, S.A.</Nombre>
+                    <Identificacion>
+                        <Tipo>02</Tipo>
+                        <Numero>3101335356</Numero>
+                    </Identificacion>
+                    <NombreComercial>SyN Max Technology</NombreComercial>
+                    <Ubicacion>
+                        <Provincia>1</Provincia>
+                        <Canton>01</Canton>
+                        <Distrito>06</Distrito>
+                        <Barrio>Central</Barrio>
+                        <OtrasSenas>75 Oeste de la escuela Republica Dominicana</OtrasSenas>
+                    </Ubicacion><Telefono>
+                            <CodigoPais>506</CodigoPais>
+                            <NumTelefono>40700796</NumTelefono>
+                        </Telefono><CorreoElectronico>ventas@synmaxtechnology.com</CorreoElectronico></Emisor><CondicionVenta>01</CondicionVenta><DetalleServicio><LineaDetalle>
+                            <NumeroLinea>1</NumeroLinea>
+                            <CodigoCABYS>8313200000100</CodigoCABYS><CodigoComercial>
+                                <Tipo>01</Tipo> 
+                                <Codigo>124</Codigo>
+                            </CodigoComercial><Cantidad>1.00000</Cantidad>
+                        <UnidadMedida>Unid</UnidadMedida><Detalle>BIOVOLT 12</Detalle>
+                            <PrecioUnitario>1.00000</PrecioUnitario>
+                            <MontoTotal>1.00000</MontoTotal><SubTotal>1.00000</SubTotal><BaseImponible>1.00000</BaseImponible><Impuesto>
+                                <Codigo>01</Codigo>
+                                <CodigoTarifaIVA>08</CodigoTarifaIVA>
+                                <Tarifa>13</Tarifa><Monto>0.13000</Monto></Impuesto><ImpuestoAsumidoEmisorFabrica>0</ImpuestoAsumidoEmisorFabrica><ImpuestoNeto>0.13000</ImpuestoNeto><MontoTotalLinea>1.13000</MontoTotalLinea></LineaDetalle></DetalleServicio><ResumenFactura><CodigoTipoMoneda>
+                            <CodigoMoneda>USD</CodigoMoneda>
+                            <TipoCambio>505.72</TipoCambio>
+                        </CodigoTipoMoneda><TotalServGravados>0.00000</TotalServGravados>
+                        <TotalServExentos>0.00000</TotalServExentos>
+                        <TotalServExonerado>0.00000</TotalServExonerado>
+                        <TotalMercanciasGravadas>1.00000</TotalMercanciasGravadas>
+                        <TotalMercanciasExentas>0.00000</TotalMercanciasExentas>
+                        <TotalMercExonerada>0.00000</TotalMercExonerada>
+                        <TotalGravado>1.00000</TotalGravado>
+                        <TotalExento>0.00000</TotalExento>
+                        <TotalExonerado>0.00000</TotalExonerado>
+                        <TotalVenta>1.00000</TotalVenta>
+                        <TotalDescuentos>0.00000</TotalDescuentos>
+                        <TotalVentaNeta>1.00000</TotalVentaNeta><TotalDesgloseImpuesto><Codigo>01</Codigo><CodigoTarifaIVA>08</CodigoTarifaIVA><TotalMontoImpuesto>0.13</TotalMontoImpuesto></TotalDesgloseImpuesto><TotalImpuesto>0.13000</TotalImpuesto><TotalImpAsumEmisorFabrica>0</TotalImpAsumEmisorFabrica><MedioPago>
+                <TipoMedioPago>02</TipoMedioPago>
+                <TotalMedioPago>1.13000</TotalMedioPago>
+                </MedioPago><TotalComprobante>1.13000</TotalComprobante></ResumenFactura><ds:Signature Id="id-8f5f299a75d5" xmlns:ds="http://www.w3.org/2000/09/xmldsig#"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference Id="Reference-b8f9683b-1bee-447a-9b63-4cb1901c3fea" URI=""><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>pRZoo4JJc42OisSaJShr79nr4zvE5jhru4O1sryv1lE=</ds:DigestValue></ds:Reference><ds:Reference URI="#xades-id-8f5f299a75d5" Type="http://uri.etsi.org/01903#SignedProperties"><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>PY2vxJTJyJzYI6xda3lr2LHyzrDU7p5WtaYTT9ywIJM=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>AbccLSi7NpnJjsgg6RmxsZD/C3MXVcfcAydPAJo0x0OZz+TbMP0tXvK4Wj9VS03qYn+MX2tgt2Gdq/BFjzLfNfAKMihdfymRAfjLKdg4Vp0w18fzyji3P9aVQ2Ums0v9vWXBWSMqzSATQL3CBwvUVdtDc8otUM6SxJVs7lFqGSji3mN0SfXucUNl/N90upW/++1VRZs/A2WO79Npz9FLRK8yHpMfIfR5tU5h1jivP1eLquFXpvU7LKYu2YnYixXsa4Tr0dOv5i93lZqlv8KY5PIHL9tF7NRD33ej22EWr35WBwZeI0YLAyfDXIo4pRWY1H875HxJOLbyZrEThuZb3g==</ds:SignatureValue><ds:KeyInfo><ds:KeyValue><ds:RSAKeyValue><ds:Modulus>w5c+pMyuBybqEnOcGRxLyr35qbqtmOW9nXa5Nepw+8NedynWFqu7dYmpmWWiCH7v2D+Wxu69pwoqwy+AvUAPGb4GuA1qT0D6qmAq67Sa3AryS+Y6rAV7Lw94y1MCl/A71AFsOD1snpL/aEBfKSPnPvBlmgpZoRIxk0ihl7Ai+999xk+AunKPe/vabnaYa+WwJAG/nGgSWZGORl5h7E9Ey8/GuuKCkY5rizJVHRdZP6s1xnr+LOXCRel+weV99gbpzqxtQ9B1mFegr2peuFnMpNfuLVNRQf625X6E3R05k20cXSgaDcJ9lcVB7l1OJiRXJjzo9/FRe6AusfZTb1AIDw==</ds:Modulus><ds:Exponent>AQAB</ds:Exponent></ds:RSAKeyValue></ds:KeyValue><ds:X509Data><ds:X509Certificate>MIIFJzCCAw+gAwIBAgIGAYPndWxZMA0GCSqGSIb3DQEBCwUAMFoxCzAJBgNVBAYTAkNSMR8wHQYDVQQKDBZNSU5JU1RFUklPIERFIEhBQ0lFTkRBMQwwCgYDVQQLDANER1QxHDAaBgNVBAMME0NBIFBFUlNPTkEgSlVSSURJQ0EwHhcNMjIxMDE3MTkzOTM1WhcNMjYxMDE2MTkzOTM1WjCBgTEZMBcGA1UEBRMQQ1BKLTMtMTAxLTMzNTM1NjELMAkGA1UEBhMCQ1IxGTAXBgNVBAoMEFBFUlNPTkEgSlVSSURJQ0ExDDAKBgNVBAsMA0NQSjEuMCwGA1UEAwwlUyAmIE4gTUFYIFRFQ0hOT0xPR1kgU09DSUVEQUQgQU5PTklNQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMOXPqTMrgcm6hJznBkcS8q9+am6rZjlvZ12uTXqcPvDXncp1haru3WJqZllogh+79g/lsbuvacKKsMvgL1ADxm+BrgNak9A+qpgKuu0mtwK8kvmOqwFey8PeMtTApfwO9QBbDg9bJ6S/2hAXykj5z7wZZoKWaESMZNIoZewIvvffcZPgLpyj3v72m52mGvlsCQBv5xoElmRjkZeYexPRMvPxrrigpGOa4syVR0XWT+rNcZ6/izlwkXpfsHlffYG6c6sbUPQdZhXoK9qXrhZzKTX7i1TUUH+tuV+hN0dOZNtHF0oGg3CfZXFQe5dTiYkVyY86PfxUXugLrH2U29QCA8CAwEAAaOByjCBxzAfBgNVHSMEGDAWgBQ7bVf11nzpnhACIEHjvRrMz7NOlTAdBgNVHQ4EFgQUAxZ9vWTPdt3FFV8iRn4/M9QS4+IwCwYDVR0PBAQDAgbAMBMGA1UdJQQMMAoGCCsGAQUFBwMEMGMGCCsGAQUFBwEBBFcwVTBTBggrBgEFBQcwAoZHaHR0cHM6Ly9wa2kuY29tcHJvYmFudGVzZWxlY3Ryb25pY29zLmdvLmNyL3Byb2QvaW50ZXJtZWRpYXRlLXBqLXBlbS5jcnQwDQYJKoZIhvcNAQELBQADggIBAHXiK9hQvlLZQ+KisgzjYI5yvbIup5Vl+jcoclphI2FswbjoEFqCjYAMTEWt6tsU4tWVsytCHGhuRFx8EZo6mPoBZGn6CNZilQ8tiA/5HjtzoAfVgnlCQ7UFkmuh8CsFey/q8FrqLsOaQmPCyU0/LmloY5ucfT/NAPHaYkQeGGs6OthjgTtQZpDJsSDlKluVQPe0VSRMt3bm8FdDRQPWh4FycsJVbHJqEDxzQwifIvGDpzwRAa4VHM29gPnA8Fm9Qn72GFhAUud3e4UNXquTlPHh2/fejEnwAvY4e7cRo/7JuZUiehxp8VFVGyZe3rCEv7M/DmWQaWyvsxA1QhOMR8QkQIoDaILp5ZFzimmc0sdUe9eWUZq8ErXCD651JtpDHwlJCs2UWqKcLKessAN7wMqESf+E2tQEzdoXu8iVzwVuxWPylgnN9szCuAHja7EQjRKT4AkoVI7e1+tHjfJHpLjFIL536NMXBNDEth9CsQDnlCFuXvL64WvNxYGFLCp3kXFaltfMp6kWHACMtAdb54sADGB6PHAW+bXFlZg+5mXOh9RspoaQMRDffxjah4TNV319O8Yc7wtR0+EzeSelEIwmkLG9i85OZi6NLSRH5nKTIxslJRVKBE8qpqxbktG0My5RcZQoCGLwo1Zk2lOYRAabkNei2kfuszMceVVL5g63</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties Target="#id-8f5f299a75d5" xmlns:xades="http://uri.etsi.org/01903/v1.3.2#"><xades:SignedProperties Id="xades-id-8f5f299a75d5"><xades:SignedSignatureProperties><xades:SigningTime>2025-08-25T16:56:28.259Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>UGb2vf7Fe7XDRFGd/BNCS7q155fWGQ38fuVqg9lFRJI=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>C=CR, O=MINISTERIO DE HACIENDA, OU=DGT, CN=CA PERSONA JURIDICA</ds:X509IssuerName><ds:X509SerialNumber>1666035575897</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate><xades:SignaturePolicyIdentifier><xades:SignaturePolicyId><xades:SigPolicyId><xades:Identifier Qualifier="OIDAsURI">https://cdn.comprobanteselectronicos.go.cr/xml-schemas/Resoluci%C3%B3n_General_sobre_disposiciones_t%C3%A9cnicas_comprobantes_electr%C3%B3nicos_para_efectos_tributarios.pdf</xades:Identifier></xades:SigPolicyId><xades:SigPolicyHash><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>+IGnHAzSH5AiA1ePiBI39Xhpkbw=</ds:DigestValue></xades:SigPolicyHash></xades:SignaturePolicyId></xades:SignaturePolicyIdentifier><xades:SignerRole><xades:ClaimedRoles><xades:ClaimedRole>ObligadoTributario</xades:ClaimedRole></xades:ClaimedRoles></xades:SignerRole></xades:SignedSignatureProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></TiqueteElectronico>
