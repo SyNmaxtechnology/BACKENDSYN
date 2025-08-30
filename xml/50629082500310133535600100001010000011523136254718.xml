@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+                    <FacturaElectronica xmlns="https://cdn.comprobanteselectronicos.go.cr/xml-schemas/v4.4/facturaElectronica" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Clave>50629082500310133535600100001010000011523136254718</Clave>
+                    <ProveedorSistemas>3101335356</ProveedorSistemas>
+                    <CodigoActividadEmisor>515201</CodigoActividadEmisor>
+                    <CodigoActividadReceptor>721001</CodigoActividadReceptor>
+                    
+                    <NumeroConsecutivo>00100001010000011523</NumeroConsecutivo>
+                    <FechaEmision>2025-08-29T23:22:03</FechaEmision>
+                    <Emisor>
+                        <Nombre>SyN Max Technology, S.A.</Nombre>
+                        <Identificacion>
+                            <Tipo>02</Tipo>
+                            <Numero>3101335356</Numero>
+                        </Identificacion><NombreComercial>SyN Max Technology</NombreComercial><Ubicacion>
+                            <Provincia>1</Provincia>
+                            <Canton>01</Canton>
+                            <Distrito>06</Distrito>
+                            <Barrio>Central</Barrio>
+                            <OtrasSenas>75 Oeste de la escuela Republica Dominicana</OtrasSenas>
+                        </Ubicacion><Telefono>
+                            <CodigoPais>506</CodigoPais>
+                            <NumTelefono>40700796</NumTelefono>
+                        </Telefono><CorreoElectronico>ventas@synmaxtechnology.com</CorreoElectronico></Emisor><Receptor><Nombre>ALEX VARGAS BRENES</Nombre><Identificacion>
+                            <Tipo>01</Tipo>
+                            <Numero>108320733</Numero>
+                        </Identificacion><NombreComercial>ALEX VARGAS BRENES</NombreComercial><Ubicacion>
+                            <Provincia>1</Provincia>
+                            <Canton>01</Canton>
+                            <Distrito>06</Distrito>
+                            <Barrio>Central</Barrio>
+                            <OtrasSenas>NO DEFINIDO</OtrasSenas>
+                        </Ubicacion><Telefono>
+                                <CodigoPais>506</CodigoPais>
+                                <NumTelefono>83853369</NumTelefono>
+                            </Telefono><CorreoElectronico>morado0577@gmail.com</CorreoElectronico></Receptor><CondicionVenta>01</CondicionVenta><PlazoCredito>0</PlazoCredito><DetalleServicio><LineaDetalle>
+                             <NumeroLinea>1</NumeroLinea>
+                             <CodigoCABYS>8313200000100</CodigoCABYS><CodigoComercial>
+                                 <Tipo>04</Tipo> 
+                                 <Codigo>034001</Codigo>
+                             </CodigoComercial><Cantidad>1.00000</Cantidad>
+                         <UnidadMedida>Unid</UnidadMedida><Detalle>CHOCOLATE</Detalle>
+                             <PrecioUnitario>894.31000</PrecioUnitario>
+                             <MontoTotal>894.31000</MontoTotal><SubTotal>894.31000</SubTotal><BaseImponible>894.31000</BaseImponible><Impuesto>
+                                 <Codigo>01</Codigo>
+                                 <CodigoTarifaIVA>08</CodigoTarifaIVA>
+                                 <Tarifa>13</Tarifa><Monto>116.26000</Monto></Impuesto><ImpuestoAsumidoEmisorFabrica>0</ImpuestoAsumidoEmisorFabrica><ImpuestoNeto>116.26000</ImpuestoNeto><MontoTotalLinea>1010.57000</MontoTotalLinea></LineaDetalle><LineaDetalle>
+                             <NumeroLinea>2</NumeroLinea>
+                             <CodigoCABYS>8313200000100</CodigoCABYS><CodigoComercial>
+                                 <Tipo>04</Tipo> 
+                                 <Codigo>034008</Codigo>
+                             </CodigoComercial><Cantidad>1.00000</Cantidad>
+                         <UnidadMedida>Unid</UnidadMedida><Detalle>CAPPUCCINO FRIO</Detalle>
+                             <PrecioUnitario>1341.46000</PrecioUnitario>
+                             <MontoTotal>1341.46000</MontoTotal><SubTotal>1341.46000</SubTotal><BaseImponible>1341.46000</BaseImponible><Impuesto>
+                                 <Codigo>01</Codigo>
+                                 <CodigoTarifaIVA>08</CodigoTarifaIVA>
+                                 <Tarifa>13</Tarifa><Monto>174.39000</Monto></Impuesto><ImpuestoAsumidoEmisorFabrica>0</ImpuestoAsumidoEmisorFabrica><ImpuestoNeto>174.39000</ImpuestoNeto><MontoTotalLinea>1515.85000</MontoTotalLinea></LineaDetalle><LineaDetalle>
+                             <NumeroLinea>3</NumeroLinea>
+                             <CodigoCABYS>8313200000100</CodigoCABYS><CodigoComercial>
+                                 <Tipo>04</Tipo> 
+                                 <Codigo>009001</Codigo>
+                             </CodigoComercial><Cantidad>1.00000</Cantidad>
+                         <UnidadMedida>Unid</UnidadMedida><Detalle>IMPERIAL SILVER 350</Detalle>
+                             <PrecioUnitario>1463.41000</PrecioUnitario>
+                             <MontoTotal>1463.41000</MontoTotal><SubTotal>1463.41000</SubTotal><BaseImponible>1463.41000</BaseImponible><Impuesto>
+                                 <Codigo>01</Codigo>
+                                 <CodigoTarifaIVA>08</CodigoTarifaIVA>
+                                 <Tarifa>13</Tarifa><Monto>190.24000</Monto></Impuesto><ImpuestoAsumidoEmisorFabrica>0</ImpuestoAsumidoEmisorFabrica><ImpuestoNeto>190.24000</ImpuestoNeto><MontoTotalLinea>1653.65000</MontoTotalLinea></LineaDetalle></DetalleServicio> <OtrosCargos>
+                     <TipoDocumentoOC>06</TipoDocumentoOC>
+                     <Detalle>Servicio Restaurante</Detalle>
+                     <PorcentajeOC>10.00</PorcentajeOC>
+                     <MontoCargo>369.92</MontoCargo>
+                    </OtrosCargos><ResumenFactura><CodigoTipoMoneda>
+                             <CodigoMoneda>CRC</CodigoMoneda>
+                             <TipoCambio>1</TipoCambio>
+                         </CodigoTipoMoneda><TotalServGravados>3699.1800000000003</TotalServGravados>
+                         <TotalServExentos>0</TotalServExentos>
+                         <TotalServExonerado>0.00000</TotalServExonerado>
+                         <TotalMercanciasGravadas>0</TotalMercanciasGravadas>
+                         <TotalMercanciasExentas>0</TotalMercanciasExentas>
+                         <TotalMercExonerada>0.00000</TotalMercExonerada>
+                         <TotalGravado>3699.1800</TotalGravado>
+                         <TotalExento>0.0000</TotalExento>
+                         <TotalExonerado>0.00000</TotalExonerado>
+                         <TotalVenta>3699.18000</TotalVenta>
+                         <TotalDescuentos>0.00000</TotalDescuentos>
+                         <TotalVentaNeta>3699.18000</TotalVentaNeta><TotalDesgloseImpuesto><Codigo>01</Codigo><CodigoTarifaIVA>08</CodigoTarifaIVA><TotalMontoImpuesto>480.8900</TotalMontoImpuesto></TotalDesgloseImpuesto><TotalImpuesto>480.89000</TotalImpuesto><TotalImpAsumEmisorFabrica>0</TotalImpAsumEmisorFabrica><TotalOtrosCargos>369.92</TotalOtrosCargos><MedioPago>
+                 <TipoMedioPago>01</TipoMedioPago>
+                 <TotalMedioPago>4549.99000</TotalMedioPago>
+                 </MedioPago><TotalComprobante>4549.99000</TotalComprobante></ResumenFactura><ds:Signature Id="id-489ac03b23ff" xmlns:ds="http://www.w3.org/2000/09/xmldsig#"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference Id="Reference-77330ec7-db97-4c2e-b006-4c7421fd9fca" URI=""><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>Eq4C8KUd7SjJ4utgryl3XxKJFrLcMqMAcs73XEVA2iQ=</ds:DigestValue></ds:Reference><ds:Reference URI="#xades-id-489ac03b23ff" Type="http://uri.etsi.org/01903#SignedProperties"><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>Ouvomp+sicL0w6fYHH4FZS/sr4wUZDhVk+M1DRubM3I=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>fjxtvCTY0MRKx1YdWiZZw3oQ0eWHXDUMqRKRlquy+4+yQRQJcF/Sj1IVGfuAp6gP6GWAWA+jSnjCMTgIxCOJkCeD3QTZzOSgEmyObpROef6VIFTf5lHza74RstCtU6iQdIiagys4Rj/onB2AD4h8LKh1Gnr8aHc0UR1z2qn89HhRdFY6d3a1Qywj+X2NPAkXlMeTsSMyXofPA7Qz+ksBdoSvMC8YpWZm7iZjo4BGg0G9AtXsoxTSmk4Rjk5KZoxbXq9LH8hmEWKvNte0PUbWlCqU0kWzvL4hua1fdJkWz+oRfVkLdnjSYNtqsdxRTsFDM0KyiA2chImarSm9w4mIgA==</ds:SignatureValue><ds:KeyInfo><ds:KeyValue><ds:RSAKeyValue><ds:Modulus>w5c+pMyuBybqEnOcGRxLyr35qbqtmOW9nXa5Nepw+8NedynWFqu7dYmpmWWiCH7v2D+Wxu69pwoqwy+AvUAPGb4GuA1qT0D6qmAq67Sa3AryS+Y6rAV7Lw94y1MCl/A71AFsOD1snpL/aEBfKSPnPvBlmgpZoRIxk0ihl7Ai+999xk+AunKPe/vabnaYa+WwJAG/nGgSWZGORl5h7E9Ey8/GuuKCkY5rizJVHRdZP6s1xnr+LOXCRel+weV99gbpzqxtQ9B1mFegr2peuFnMpNfuLVNRQf625X6E3R05k20cXSgaDcJ9lcVB7l1OJiRXJjzo9/FRe6AusfZTb1AIDw==</ds:Modulus><ds:Exponent>AQAB</ds:Exponent></ds:RSAKeyValue></ds:KeyValue><ds:X509Data><ds:X509Certificate>MIIFJzCCAw+gAwIBAgIGAYPndWxZMA0GCSqGSIb3DQEBCwUAMFoxCzAJBgNVBAYTAkNSMR8wHQYDVQQKDBZNSU5JU1RFUklPIERFIEhBQ0lFTkRBMQwwCgYDVQQLDANER1QxHDAaBgNVBAMME0NBIFBFUlNPTkEgSlVSSURJQ0EwHhcNMjIxMDE3MTkzOTM1WhcNMjYxMDE2MTkzOTM1WjCBgTEZMBcGA1UEBRMQQ1BKLTMtMTAxLTMzNTM1NjELMAkGA1UEBhMCQ1IxGTAXBgNVBAoMEFBFUlNPTkEgSlVSSURJQ0ExDDAKBgNVBAsMA0NQSjEuMCwGA1UEAwwlUyAmIE4gTUFYIFRFQ0hOT0xPR1kgU09DSUVEQUQgQU5PTklNQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMOXPqTMrgcm6hJznBkcS8q9+am6rZjlvZ12uTXqcPvDXncp1haru3WJqZllogh+79g/lsbuvacKKsMvgL1ADxm+BrgNak9A+qpgKuu0mtwK8kvmOqwFey8PeMtTApfwO9QBbDg9bJ6S/2hAXykj5z7wZZoKWaESMZNIoZewIvvffcZPgLpyj3v72m52mGvlsCQBv5xoElmRjkZeYexPRMvPxrrigpGOa4syVR0XWT+rNcZ6/izlwkXpfsHlffYG6c6sbUPQdZhXoK9qXrhZzKTX7i1TUUH+tuV+hN0dOZNtHF0oGg3CfZXFQe5dTiYkVyY86PfxUXugLrH2U29QCA8CAwEAAaOByjCBxzAfBgNVHSMEGDAWgBQ7bVf11nzpnhACIEHjvRrMz7NOlTAdBgNVHQ4EFgQUAxZ9vWTPdt3FFV8iRn4/M9QS4+IwCwYDVR0PBAQDAgbAMBMGA1UdJQQMMAoGCCsGAQUFBwMEMGMGCCsGAQUFBwEBBFcwVTBTBggrBgEFBQcwAoZHaHR0cHM6Ly9wa2kuY29tcHJvYmFudGVzZWxlY3Ryb25pY29zLmdvLmNyL3Byb2QvaW50ZXJtZWRpYXRlLXBqLXBlbS5jcnQwDQYJKoZIhvcNAQELBQADggIBAHXiK9hQvlLZQ+KisgzjYI5yvbIup5Vl+jcoclphI2FswbjoEFqCjYAMTEWt6tsU4tWVsytCHGhuRFx8EZo6mPoBZGn6CNZilQ8tiA/5HjtzoAfVgnlCQ7UFkmuh8CsFey/q8FrqLsOaQmPCyU0/LmloY5ucfT/NAPHaYkQeGGs6OthjgTtQZpDJsSDlKluVQPe0VSRMt3bm8FdDRQPWh4FycsJVbHJqEDxzQwifIvGDpzwRAa4VHM29gPnA8Fm9Qn72GFhAUud3e4UNXquTlPHh2/fejEnwAvY4e7cRo/7JuZUiehxp8VFVGyZe3rCEv7M/DmWQaWyvsxA1QhOMR8QkQIoDaILp5ZFzimmc0sdUe9eWUZq8ErXCD651JtpDHwlJCs2UWqKcLKessAN7wMqESf+E2tQEzdoXu8iVzwVuxWPylgnN9szCuAHja7EQjRKT4AkoVI7e1+tHjfJHpLjFIL536NMXBNDEth9CsQDnlCFuXvL64WvNxYGFLCp3kXFaltfMp6kWHACMtAdb54sADGB6PHAW+bXFlZg+5mXOh9RspoaQMRDffxjah4TNV319O8Yc7wtR0+EzeSelEIwmkLG9i85OZi6NLSRH5nKTIxslJRVKBE8qpqxbktG0My5RcZQoCGLwo1Zk2lOYRAabkNei2kfuszMceVVL5g63</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties Target="#id-489ac03b23ff" xmlns:xades="http://uri.etsi.org/01903/v1.3.2#"><xades:SignedProperties Id="xades-id-489ac03b23ff"><xades:SignedSignatureProperties><xades:SigningTime>2025-08-30T05:43:02.793Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>UGb2vf7Fe7XDRFGd/BNCS7q155fWGQ38fuVqg9lFRJI=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>C=CR, O=MINISTERIO DE HACIENDA, OU=DGT, CN=CA PERSONA JURIDICA</ds:X509IssuerName><ds:X509SerialNumber>1666035575897</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate><xades:SignaturePolicyIdentifier><xades:SignaturePolicyId><xades:SigPolicyId><xades:Identifier Qualifier="OIDAsURI">https://cdn.comprobanteselectronicos.go.cr/xml-schemas/Resoluci%C3%B3n_General_sobre_disposiciones_t%C3%A9cnicas_comprobantes_electr%C3%B3nicos_para_efectos_tributarios.pdf</xades:Identifier></xades:SigPolicyId><xades:SigPolicyHash><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>+IGnHAzSH5AiA1ePiBI39Xhpkbw=</ds:DigestValue></xades:SigPolicyHash></xades:SignaturePolicyId></xades:SignaturePolicyIdentifier><xades:SignerRole><xades:ClaimedRoles><xades:ClaimedRole>ObligadoTributario</xades:ClaimedRole></xades:ClaimedRoles></xades:SignerRole></xades:SignedSignatureProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></FacturaElectronica>

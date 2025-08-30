@@ -201,6 +201,10 @@ const genXMLFactura = (obj, ordenes, llave, clave, idfactura, tipoComprobante) =
                  let monto = 0;
                  let tc=1;
                  let acumulados= {};
+                 let sumaserviciosgr=0;
+                 let sumaserviciosex=0;
+                 let sumamercanciagr=0;
+                 let sumamercanciaex=0;
                  let matrizTarifas = ({
                      codigoTarifa: '',
                      total:0.00
@@ -211,15 +215,35 @@ const genXMLFactura = (obj, ordenes, llave, clave, idfactura, tipoComprobante) =
                      let codigoProducto = ordenes[detalle].codigobarra_producto;
                      let existeCodigoCabys = false;
                      let codigoCabys = '';
+
                      if(ordenes[detalle].codigoCabys){
      
                          if(ordenes[detalle].codigoCabys.length > 13){
+
                              codigoCabys=ordenes[detalle].codigoCabys.substring(0,13);
                              existeCodigoCabys = true;
+                             
                          } else {
                              codigoCabys=ordenes[detalle].codigoCabys
                              existeCodigoCabys = true;
-                         }                    
+
+                             //CAMBIO SYN V4.4
+                             if (codigoCabys.substring(0,1) >4 ){
+                                if(ordenes[detalle].impuesto_neto > 0 ){
+                                   sumaserviciosgr+=parseFloat(ordenes[detalle].montototal);
+                                }else{
+                                   sumaserviciosex+=parseFloat(ordenes[detalle].montototal);
+                                }
+                              
+                            }else{
+                               if(ordenes[detalle].impuesto_neto > 0 ){
+                                   sumamercanciagr+=parseFloat(ordenes[detalle].montototal);
+                               }else{
+                                   sumamercanciaex+=parseFloat(ordenes[detalle].montototal);
+                               }
+                            }
+                         }  
+
                      }
      
                      if(codigoProducto){
@@ -359,8 +383,9 @@ const genXMLFactura = (obj, ordenes, llave, clave, idfactura, tipoComprobante) =
                              <CodigoMoneda>${obj.codigomoneda}</CodigoMoneda>
                              <TipoCambio>${tc}</TipoCambio>
                          </CodigoTipoMoneda>`;
-     
-                 xml += `<TotalServGravados>${obj.totalservgravados}</TotalServGravados>
+                 
+                //CAMBIO SYN V4.4         
+                /* xml += `<TotalServGravados>${obj.totalservgravados}</TotalServGravados>
                          <TotalServExentos>${obj.totalservexentos}</TotalServExentos>
                          <TotalServExonerado>${obj.totalservexonerado}</TotalServExonerado>
                          <TotalMercanciasGravadas>${obj.totalmercanciasgravadas}</TotalMercanciasGravadas>
@@ -371,17 +396,38 @@ const genXMLFactura = (obj, ordenes, llave, clave, idfactura, tipoComprobante) =
                          <TotalExonerado>${obj.totalexonerado}</TotalExonerado>
                          <TotalVenta>${obj.totalventa}</TotalVenta>
                          <TotalDescuentos>${obj.totaldescuentos}</TotalDescuentos>
-                         <TotalVentaNeta>${obj.totalventaneta}</TotalVentaNeta>`;
+                         <TotalVentaNeta>${obj.totalventaneta}</TotalVentaNeta>`;*/
+                         let tgravado=sumamercanciagr+sumaserviciosgr;
+                         tgravado=tgravado.toFixed(4);
+                         let texento=sumamercanciaex+sumaserviciosex;
+                         texento=texento.toFixed(4);
+                         sumamercanciaex= sumamercanciaex.toFixed(4);
+                         sumamercanciagr= sumamercanciagr.toFixed(4);
+                         sumaserviciosex=sumaserviciosex.toFixed(4);
+                         sumaserviciosgr=sumaserviciosgr.toFixed(4);
+                         xml += `<TotalServGravados>${sumaserviciosgr}</TotalServGravados>
+                         <TotalServExentos>${sumamercanciaex}</TotalServExentos>
+                         <TotalServExonerado>${obj.totalservexonerado}</TotalServExonerado>
+                         <TotalMercanciasGravadas>${sumamercanciagr}</TotalMercanciasGravadas>
+                         <TotalMercanciasExentas>${sumamercanciaex}</TotalMercanciasExentas>
+                         <TotalMercExonerada>${obj.totalmercanciaexonerada}</TotalMercExonerada>
+                         <TotalGravado>${tgravado}</TotalGravado>
+                         <TotalExento>${texento}</TotalExento>
+                         <TotalExonerado>${obj.totalexonerado}</TotalExonerado>
+                         <TotalVenta>${obj.totalventa}</TotalVenta>
+                         <TotalDescuentos>${obj.totaldescuentos}</TotalDescuentos>
+                         <TotalVentaNeta>${obj.totalventaneta}</TotalVentaNeta>`;     
                    
                          //SE AGREGA version 4.4  IVa en codigotarifas matrizTarifas
                          matrizTarifas.forEach(({ codigoTarifa, total }) => {
-                            
+                            let montoiva=parseFloat(total);
+                            montoiva=montoiva.toFixed(4);
                              //console.log(`Código: ${codigoTarifa}`);
                              //console.log(`Total: ${total}`);
                              xml += `<TotalDesgloseImpuesto>`;
                              xml += `<Codigo>01</Codigo>`;
                              xml += `<CodigoTarifaIVA>${codigoTarifa}</CodigoTarifaIVA>`;
-                             xml += `<TotalMontoImpuesto>${total}</TotalMontoImpuesto>`;
+                             xml += `<TotalMontoImpuesto>${montoiva}</TotalMontoImpuesto>`;
                              xml += `</TotalDesgloseImpuesto>`;
  
                            });
@@ -774,6 +820,10 @@ const genXMLTiquete = (obj, ordenes, llave, clave, idfactura, tipoComprobante) =
                 let monto = 0;
                 let tc=1;
                 let acumulados= {};
+                let sumaserviciosgr=0.00;
+                let sumaserviciosex=0.00;
+                let sumamercanciagr=0.00;
+                let sumamercanciaex=0.00;
                 let matrizTarifas = ({
                     codigoTarifa: '',
                     total:0.00
@@ -784,6 +834,8 @@ const genXMLTiquete = (obj, ordenes, llave, clave, idfactura, tipoComprobante) =
                     let codigoProducto = ordenes[detalle].codigobarra_producto;
                     let existeCodigoCabys = false;
                     let codigoCabys = '';
+                   
+
                     if(ordenes[detalle].codigoCabys){
     
                         if(ordenes[detalle].codigoCabys.length > 13){
@@ -791,7 +843,22 @@ const genXMLTiquete = (obj, ordenes, llave, clave, idfactura, tipoComprobante) =
                             existeCodigoCabys = true;
                         } else {
                             codigoCabys=ordenes[detalle].codigoCabys
+                            console.log(codigoProducto)
                             existeCodigoCabys = true;
+                            if (codigoCabys.substring(0,1) >4 ){
+                                if(ordenes[detalle].impuesto_neto > 0 ){
+                                   sumaserviciosgr+=parseFloat(ordenes[detalle].montototal);
+                                }else{
+                                   sumaserviciosex+=parseFloat(ordenes[detalle].montototal);
+                                }
+                              
+                            }else{
+                               if(ordenes[detalle].impuesto_neto > 0 ){
+                                   sumamercanciagr+=parseFloat(ordenes[detalle].montototal);
+                               }else{
+                                   sumamercanciaex+=parseFloat(ordenes[detalle].montototal);
+                               }
+                            }
                         }                    
                     }
     
@@ -932,8 +999,9 @@ const genXMLTiquete = (obj, ordenes, llave, clave, idfactura, tipoComprobante) =
                             <CodigoMoneda>${obj.codigomoneda}</CodigoMoneda>
                             <TipoCambio>${tc}</TipoCambio>
                         </CodigoTipoMoneda>`;
-    
-                xml += `<TotalServGravados>${obj.totalservgravados}</TotalServGravados>
+                
+                //CAMBIO SYN V4.4        
+                /*xml += `<TotalServGravados>${obj.totalservgravados}</TotalServGravados>
                         <TotalServExentos>${obj.totalservexentos}</TotalServExentos>
                         <TotalServExonerado>${obj.totalservexonerado}</TotalServExonerado>
                         <TotalMercanciasGravadas>${obj.totalmercanciasgravadas}</TotalMercanciasGravadas>
@@ -944,17 +1012,38 @@ const genXMLTiquete = (obj, ordenes, llave, clave, idfactura, tipoComprobante) =
                         <TotalExonerado>${obj.totalexonerado}</TotalExonerado>
                         <TotalVenta>${obj.totalventa}</TotalVenta>
                         <TotalDescuentos>${obj.totaldescuentos}</TotalDescuentos>
-                        <TotalVentaNeta>${obj.totalventaneta}</TotalVentaNeta>`;
+                        <TotalVentaNeta>${obj.totalventaneta}</TotalVentaNeta>`;*/
+                        let tgravado=sumamercanciagr+sumaserviciosgr;
+                         tgravado=tgravadoto.tofixed(4);
+                         let texento=sumamercanciaex+sumaserviciosex;
+                         texento=texento.toFixed(4);
+                         sumamercanciaex= sumamercanciaex.toFixed(4);
+                         sumamercanciagr= sumamercanciagr.toFixed(4);
+                         sumaserviciosex=sumaserviciosex.toFixed(4);
+                         sumaserviciosgr=sumaserviciosgr.toFixed(4);
+                        xml += `<TotalServGravados>${sumaserviciosgr}</TotalServGravados>
+                        <TotalServExentos>${sumamercanciaex}</TotalServExentos>
+                        <TotalServExonerado>${obj.totalservexonerado}</TotalServExonerado>
+                        <TotalMercanciasGravadas>${sumamercanciagr}</TotalMercanciasGravadas>
+                        <TotalMercanciasExentas>${sumamercanciaex}</TotalMercanciasExentas>
+                        <TotalMercExonerada>${obj.totalmercanciaexonerada}</TotalMercExonerada>
+                        <TotalGravado>${tgravado}</TotalGravado>
+                        <TotalExento>${texento}</TotalExento>
+                        <TotalExonerado>${obj.totalexonerado}</TotalExonerado>
+                        <TotalVenta>${obj.totalventa}</TotalVenta>
+                        <TotalDescuentos>${obj.totaldescuentos}</TotalDescuentos>
+                        <TotalVentaNeta>${obj.totalventaneta}</TotalVentaNeta>`;         
                   
                         //SE AGREGA version 4.4  IVa en codigotarifas matrizTarifas
                         matrizTarifas.forEach(({ codigoTarifa, total }) => {
-                           
-                            //console.log(`Código: ${codigoTarifa}`);
+                            let montoiva=parseFloat(total);
+                            montoiva=montoiva.toFixed(4);
+                            //console.log(`Código: ${cosdigoTarifa}`);
                             //console.log(`Total: ${total}`);
                             xml += `<TotalDesgloseImpuesto>`;
                             xml += `<Codigo>01</Codigo>`;
                             xml += `<CodigoTarifaIVA>${codigoTarifa}</CodigoTarifaIVA>`;
-                            xml += `<TotalMontoImpuesto>${total}</TotalMontoImpuesto>`;
+                            xml += `<TotalMontoImpuesto>${montoiva}</TotalMontoImpuesto>`;
                             xml += `</TotalDesgloseImpuesto>`;
 
                           });
@@ -1189,6 +1278,10 @@ const genNotaCredito = (obj, ordenes, llave, clave, idfactura, tipoComprobante) 
                 let monto = 0;
                 let tc=1;
                 let acumulados= {};
+                let sumaserviciosgr=0.00;
+                let sumaserviciosex=0.00;
+                let sumamercanciagr=0.00;
+                let sumamercanciaex=0.00;
                 let matrizTarifas = ({
                     codigoTarifa: '',
                     total:0.00
@@ -1207,6 +1300,21 @@ const genNotaCredito = (obj, ordenes, llave, clave, idfactura, tipoComprobante) 
                         } else {
                             codigoCabys=ordenes[detalle].codigoCabys
                             existeCodigoCabys = true;
+                            //CAMBIO SYN V4.4
+                            if (codigoCabys.substring(0,1) >4 ){
+                                if(ordenes[detalle].impuesto_neto > 0 ){
+                                   sumaserviciosgr+=parseFloat(ordenes[detalle].montototal);
+                                }else{
+                                   sumaserviciosex+=parseFloat(ordenes[detalle].montototal);
+                                }
+                              
+                            }else{
+                               if(ordenes[detalle].impuesto_neto > 0 ){
+                                   sumamercanciagr+=parseFloat(ordenes[detalle].montototal);
+                               }else{
+                                   sumamercanciaex+=parseFloat(ordenes[detalle].montototal);
+                               }
+                            }
                         }                    
                     }
     
@@ -1346,7 +1454,8 @@ const genNotaCredito = (obj, ordenes, llave, clave, idfactura, tipoComprobante) 
                             <CodigoMoneda>${obj.codigomoneda}</CodigoMoneda>
                             <TipoCambio>${tc}</TipoCambio>
                         </CodigoTipoMoneda>`;
-    
+                //CAMBIO SYN V4.4        
+                /*
                 xml += `<TotalServGravados>${parseFloat(obj.totalservgravados).toFixed(2)}</TotalServGravados>
                         <TotalServExentos>${parseFloat(obj.totalservexentos).toFixed(2)}</TotalServExentos>
                         <TotalServExonerado>${parseFloat(obj.totalservexonerado).toFixed(2)}</TotalServExonerado>
@@ -1358,17 +1467,41 @@ const genNotaCredito = (obj, ordenes, llave, clave, idfactura, tipoComprobante) 
                         <TotalExonerado>${parseFloat(obj.totalexonerado).toFixed(2)}</TotalExonerado>
                         <TotalVenta>${parseFloat(obj.totalventa).toFixed(2)}</TotalVenta>
                         <TotalDescuentos>${parseFloat(obj.totaldescuentos).toFixed(2)}</TotalDescuentos>
-                        <TotalVentaNeta>${parseFloat(obj.totalventaneta).toFixed(2)}</TotalVentaNeta>`;
+                        <TotalVentaNeta>${parseFloat(obj.totalventaneta).toFixed(2)}</TotalVentaNeta>`;*/
+
+                        let tgravado=sumamercanciagr+sumaserviciosgr;
+                        tgravado=tgravadoto.toFixed(4);
+                        let texento=sumamercanciaex+sumaserviciosex;
+                        texento=texento.toFixed(4);
+                        sumamercanciaex= sumamercanciaex.toFixed(4);
+                        sumamercanciagr= sumamercanciagr.toFixed(4);
+                        sumaserviciosex=sumaserviciosex.toFixed(4);
+                        sumaserviciosgr=sumaserviciosgr.toFixed(4);
+                        xml += `<TotalServGravados>${sumaserviciosgr}</TotalServGravados>
+                        <TotalServExentos>${sumamercanciaex}</TotalServExentos>
+                        <TotalServExonerado>${obj.totalservexonerado}</TotalServExonerado>
+                        <TotalMercanciasGravadas>${sumamercanciagr}</TotalMercanciasGravadas>
+                        <TotalMercanciasExentas>${sumamercanciaex}</TotalMercanciasExentas>
+                        <TotalMercExonerada>${obj.totalmercanciaexonerada}</TotalMercExonerada>
+                        <TotalGravado>${tgravado}</TotalGravado>
+                        <TotalExento>${texento}</TotalExento>
+                        <TotalExonerado>${obj.totalexonerado}</TotalExonerado>
+                        <TotalVenta>${obj.totalventa}</TotalVenta>
+                        <TotalDescuentos>${obj.totaldescuentos}</TotalDescuentos>
+                        <TotalVentaNeta>${obj.totalventaneta}</TotalVentaNeta>`;         
+                        
+
 
                 //SE AGREGA version 4.4  IVa en codigotarifas matrizTarifas
                 matrizTarifas.forEach(({ codigoTarifa, total }) => {
-                           
+                    let montoiva=parseFloat(total);
+                    montoiva=montoiva.toFixed(4);      
                     //console.log(`Código: ${codigoTarifa}`);
                     //console.log(`Total: ${total}`);
                     xml += `<TotalDesgloseImpuesto>`;
                     xml += `<Codigo>01</Codigo>`;
                     xml += `<CodigoTarifaIVA>${codigoTarifa}</CodigoTarifaIVA>`;
-                    xml += `<TotalMontoImpuesto>${total}</TotalMontoImpuesto>`;
+                    xml += `<TotalMontoImpuesto>${montoiva}</TotalMontoImpuesto>`;
                     xml += `</TotalDesgloseImpuesto>`;
 
                   });
