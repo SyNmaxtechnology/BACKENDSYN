@@ -1470,7 +1470,7 @@ const genNotaCredito = (obj, ordenes, llave, clave, idfactura, tipoComprobante) 
                         <TotalVentaNeta>${parseFloat(obj.totalventaneta).toFixed(2)}</TotalVentaNeta>`;*/
 
                         let tgravado=sumamercanciagr+sumaserviciosgr;
-                        tgravado=tgravadoto.toFixed(4);
+                        tgravado=tgravado.toFixed(4);
                         let texento=sumamercanciaex+sumaserviciosex;
                         texento=texento.toFixed(4);
                         sumamercanciaex= sumamercanciaex.toFixed(4);
