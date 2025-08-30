@@ -1014,7 +1014,7 @@ const genXMLTiquete = (obj, ordenes, llave, clave, idfactura, tipoComprobante) =
                         <TotalDescuentos>${obj.totaldescuentos}</TotalDescuentos>
                         <TotalVentaNeta>${obj.totalventaneta}</TotalVentaNeta>`;*/
                         let tgravado=sumamercanciagr+sumaserviciosgr;
-                         tgravado=tgravado.tofixed(4);
+                         tgravado=tgravado.toFixed(4);
                          let texento=sumamercanciaex+sumaserviciosex;
                          texento=texento.toFixed(4);
                          sumamercanciaex= sumamercanciaex.toFixed(4);
